@@ -1,43 +1,39 @@
 def Plot(sm):
-    compound = [[0, '']]
+    compound = [[0, []]]
     depth = 0
     comp_branch = 0
-    for i in range(0, len(sm)):
-        ringc =False
-        elemc =False
+    symbolc = -1
+    ringc =False
+    inorgc =False    
+    for i in range(0, len(sm)):        
         if sm[i] == '(':
+            if ringc:
+                compound[comp_branch][1][symbolc] += '%'
+                ringc =False
             comp_branch +=1
             depth +=1
-            if ringc:
-                compound[comp_branch][1] += '%'
-                ringc =False
-            if elemc:
-                compound[comp_branch][1] += ']'
-                elemc =False
-            compound.append([depth, ''])
+            symbolc = -1   
+            compound.append([depth, []])
         elif sm[i] ==')':
-            comp_branch +=1
-            depth -=1
             if ringc:
-                compound[comp_branch][1] += '%'
+                compound[comp_branch][1][symbolc] += '%'
                 ringc =False
-            if elemc:
-                compound[comp_branch][1] += ']'
-                elemc =False            
-            compound.append([depth, ''])
+            comp_branch +=1
+            depth -=1 
+            symbolc = -1
+            compound.append([depth, []])
         else:
-            if elemc:
-                elemc = False
-                compound[comp_branch][1] += ']'            
-            if sm[i] == '%':
+            if not ringc and sm[i] == '%':
                 ringc =True
-                compound[comp_branch][1] += '%'
-            if ('1'<= sm[i] <='9') and not ringc:
+                compound[comp_branch][1].append('%')
+                symbolc += 1
+            elif ('1'<= sm[i] <='9') and not ringc:
                 ringc =True
-                compound[comp_branch][1] += '%'
-                compound[comp_branch][1] += sm[i]
+                compound[comp_branch][1].append('%')
+                symbolc += 1
+                compound[comp_branch][1][symbolc] += sm[i]
             elif ('1'<= sm[i] <='9') and ringc:
-                compound[comp_branch][1] += sm[i]
+                compound[comp_branch][1][symbolc] += sm[i]
             elif ringc and sm[i] == '%':
                 print('Encountered unneeded "%" at i around', i)
                 print('Plz check this SMILES for mistakes! Proceed?')
@@ -46,35 +42,23 @@ def Plot(sm):
             else:
                 if ringc:
                     ringc = False
-                    compound[comp_branch][1] += '%'
+                    compound[comp_branch][1][symbolc] += '%'
                 if sm[i] == '[':
-                    elemc =True
-                    compound[comp_branch][1] += '['
-                elif ('A'<= sm[i] <='Z') and elemc:
-                    compound[comp_branch][1] += sm[i]
-                elif ('a'<= sm[i] <='z') and elemc:
-                    compound[comp_branch][1] += sm[i]
-                    if i != len(sm)-1:
-                        if sm[i+1] != ']':
-                            elemc =False
-                            compound[comp_branch][1] += ']'
+                    inorgc =True
+                    symbolc += 1
+                    compound[comp_branch][1].append('')
+                elif ('A'<= sm[i] <='Z') and inorgc:
+                    compound[comp_branch][1][symbolc] += sm[i]
+                elif ('a'<= sm[i] <='z') and inorgc:
+                    compound[comp_branch][1][symbolc] += sm[i]
                 elif sm[i] == ']':
-                    elemc =False
-                    compound[comp_branch][1] += ']'
-                elif ('a'<= sm[i] <='z') and elemc:
-                    elemc =False
-                    compound[comp_branch][1] += sm[i]
-                    compound[comp_branch][1] += ']'
-                elif ('A'<= sm[i] <='Z') or ('a'<= sm[i] <='z') and not elemc:
-                    compound[comp_branch][1] += '['
-                    compound[comp_branch][1] += sm[i]
-                    if i != len(sm)-1:
-                        if 'a'<= sm[i+1] <='z':
-                            elemc =True
-                        else:
-                            compound[comp_branch][1] += ']' 
-                    else:
-                        compound[comp_branch][1] += ']'
+                    inorgc =False
+                elif ('A'<= sm[i] <='Z') or ('a'<= sm[i] <='z') and not inorgc:
+                    compound[comp_branch][1].append('')
+                    if sm[i] != 'r' and sm[i] != 'l':
+                        symbolc += 1
+                    compound[comp_branch][1][symbolc] += sm[i]
+                    
     
     return compound
 
