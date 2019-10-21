@@ -25,12 +25,10 @@ def Plot(sm):
         else:
             if not ringc and sm[i] == '%':
                 ringc =True
-                compound[comp_branch][1].append('%')
-                symbolc += 1
+                compound[comp_branch][1][symbolc] += '%'
             elif ('1'<= sm[i] <='9') and not ringc:
                 ringc =True
-                compound[comp_branch][1].append('%')
-                symbolc += 1
+                compound[comp_branch][1][symbolc] += '%'
                 compound[comp_branch][1][symbolc] += sm[i]
             elif ('1'<= sm[i] <='9') and ringc:
                 compound[comp_branch][1][symbolc] += sm[i]
@@ -42,7 +40,6 @@ def Plot(sm):
             else:
                 if ringc:
                     ringc = False
-                    compound[comp_branch][1][symbolc] += '%'
                 if sm[i] == '[':
                     inorgc =True
                     symbolc += 1
