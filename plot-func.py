@@ -3,6 +3,7 @@ def Plot(sm):
     depth = 0
     comp_branch = 0
     symbolc = -1
+    cyclec =0
     ringc =False
     inorgc =False    
     for i in range(0, len(sm)):        
@@ -28,10 +29,12 @@ def Plot(sm):
             if not ringc and sm[i] == '%':
                 ringc =True
                 compound[comp_branch][1][symbolc] += '%'
+                cyclec +=1
             elif ('0'<= sm[i] <='9') and not ringc:
                 ringc =True
                 compound[comp_branch][1][symbolc] += '%'
                 compound[comp_branch][1][symbolc] += sm[i]
+                cyclec +=1
             elif ('0'<= sm[i] <='9') and ringc:
                 compound[comp_branch][1][symbolc] += sm[i]
             elif ringc and sm[i] == '%':
@@ -49,7 +52,7 @@ def Plot(sm):
                 elif ('A'<= sm[i] <='Z') and inorgc:
                     compound[comp_branch][1][symbolc] += sm[i]
                     if i+4 < len(sm):
-                        if ']' not in sm[i:i+5] and '[' not in sm[i:i+5]:
+                        if (']' not in sm[i:i+5]) and ('[' not in sm[i:i+5]):
                             inorgc = False
                 elif ('a'<= sm[i] <='z') and inorgc:
                     compound[comp_branch][1][symbolc] += sm[i]
@@ -71,27 +74,85 @@ def Plot(sm):
                     if not inorgc:
                         compound[comp_branch][1].append(sm[i])
                         symbolc += 1
-                        inorgc = True
                     else:
                         compound[comp_branch][1][symbolc] += sm[i]
-    return compound
+    if cyclec%2 != 0:
+        print("Failed to locate an even amount of cycle ends, stopping")
+        return "Cancel"
+    else:
+        return compound, cyclec//2
 
-def Functionalize(comp):
-    comp_branch = 0 
+def Basic_Functionalize(comp, cyclec):
+    comp_branch = 0
     funclist = []
-    functionc = -1 
+    positc = -1
+    # finding bonds
     for branch in range(len(comp)):
-        for atomn in range(len(comp[branch][1])):
-            if ('=' or '#' in comp[branch][1][atomn]):
-                funclist.append(['double', comp[branch][1][atomn-1][0], comp[branch][1][atomn]])
+        for opern in range(len(comp[branch][1])):
+            oper = comp[branch][1][opern]
+            if 'A'<= oper[0] <='Z':
+                positc +=1
+            if oper in ['=', '#']:
+                if oper == '=':
+                    keyword = 'double-'
+                elif oper== '#':
+                    keyword = 'triple-'
+                if opern == 0:
+                    keyword += comp[branch-1][1][-1]
+                else:
+                    keyword += comp[branch][1][opern-1]
+                keyword += '-'+comp[branch][1][opern+1]
+                funclist.append([keyword, positc])
+    for cyclid in range(1, cyclec+1):
+        positc = -1
+        checkbranch = 0
+        cyclength = 0
+        cycle = False
+        for branch in range(len(comp)):
+            if checkbranch ==2:
+                if comp[branch][0]<comp[branch-1][0]:
+                    if comp[branch][0]<depthop:
+                        depthop = comp[branch][0]
+                    else:
+                        cyclength -= branchpos
+            elif checkbranch ==1:
+                if comp[branch][0]<comp[branch-1][0]:
+                    cyclength = branchst+1
+                checkbranch +=1
+            branchpos = 0
+            for opern in range(len(comp[branch][1])):
+                oper = comp[branch][1][opern]
+                if 'A'<= oper[0] <='Z':
+                    positc +=1
+                    branchpos +=1
+                    if cycle:
+                        cyclength += 1
+                if '%' in oper:
+                    print("Found cycle op")
+                    if oper.split('%')[1] == cyclid:
+                        if not cycle:
+                            cyclength = 1        
+                            start = positc
+                            branchst = branchpos
+                            depthop = comp[branch][0]
+                            cycle = True
+                            if branch == 0:
+                                checkbranch +=2
+                            else:
+                                checkbranch +=1
+                        elif cycle:
+                            cycle = False
+                            checkbranch +=1
+                print(cycle)
                 
-    return funclist
+    return funclist, cyclength
     
 
 #import pubchempy as pcp
 #canonsm = input().canonical_smiles
 canonsm = input()
-compound = Plot(canonsm)
+compound, cyclec = Plot(canonsm)
 print(compound)
-print(Functionalize(compound))
+print(cyclec)
+print(Basic_Functionalize(compound, cyclec))
 i = input()
