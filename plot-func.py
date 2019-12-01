@@ -76,7 +76,16 @@ def Plot(sm):
                         compound[comp_branch][1][symbolc] += sm[i]
     return compound
 
-#def Functionalize(comp):
+def Functionalize(comp):
+    comp_branch = 0 
+    funclist = []
+    functionc = -1 
+    for branch in range(len(comp)):
+        for atomn in range(len(comp[branch][1])):
+            if ('=' or '#' in comp[branch][1][atomn]):
+                funclist.append(['double', comp[branch][1][atomn-1][0], comp[branch][1][atomn]])
+                
+    return funclist
     
 
 #import pubchempy as pcp
