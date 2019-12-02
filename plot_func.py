@@ -1,4 +1,4 @@
-def Plot(sm):
+def plotc(sm):
     compound = [[0, []]]
     depth = 0
     comp_branch = 0
@@ -77,16 +77,14 @@ def Plot(sm):
                     else:
                         compound[comp_branch][1][symbolc] += sm[i]
     if cyclec%2 != 0:
-        print("Failed to locate an even amount of cycle ends, stopping")
-        return "Cancel"
+        return "Error due to uneven cycle "
     else:
         return compound, cyclec//2
 
-def Basic_Functionalize(comp, cyclec):
+def basic_funct(comp, cyclec):
     comp_branch = 0
     specbondlist = []
     positc = -1
-    # finding bonds
     for branch in range(len(comp)):
         for opern in range(len(comp[branch][1])):
             oper = comp[branch][1][opern]
@@ -129,8 +127,11 @@ def Basic_Functionalize(comp, cyclec):
                         cyclist[cyclid-1].append([branchst+1, branchend])
             elif checkbranch ==1:
                 if comp[branch][0]<comp[branch-1][0]:
-                    cyclength = branchst+1
-                checkbranch +=1
+                    cyclength = branchstcyc+1
+                    start = start-branchstcyc
+                    if depthop>0:
+                        depthop -=1
+                checkbranch =2
             branchpos = 0
             branchst = positc
             for opern in range(len(comp[branch][1])):
@@ -161,11 +162,9 @@ def Basic_Functionalize(comp, cyclec):
     return specbondlist, cyclist
     
 
-#import pubchempy as pcp
-#canonsm = input().canonical_smiles
-canonsm = input()
-compound, cyclec = Plot(canonsm)
-print(compound)
-print(cyclec)
-print(Basic_Functionalize(compound, cyclec))
-i = input()
+if __name__ == "__main__" :
+    canonsm = input()
+    compound, cyclec = Plot(canonsm)
+    print(compound)
+    print(cyclec)
+    print(Basic_Functionalize(compound, cyclec))
