@@ -84,7 +84,7 @@ def Plot(sm):
 
 def Basic_Functionalize(comp, cyclec):
     comp_branch = 0
-    funclist = []
+    specbondlist = []
     positc = -1
     # finding bonds
     for branch in range(len(comp)):
@@ -94,16 +94,27 @@ def Basic_Functionalize(comp, cyclec):
                 positc +=1
             if oper in ['=', '#']:
                 if oper == '=':
-                    keyword = 'double-'
+                    keyword = 'doub-'
                 elif oper== '#':
-                    keyword = 'triple-'
+                    keyword = 'trip-'
                 if opern == 0:
-                    keyword += comp[branch-1][1][-1]
+                    if '%' in comp[branch-1][1][-1]:
+                        keyword += comp[branch-1][1][-1].split('%')[0]
+                    else:
+                        keyword += comp[branch-1][1][-1]
                 else:
-                    keyword += comp[branch][1][opern-1]
-                keyword += '-'+comp[branch][1][opern+1]
-                funclist.append([keyword, positc])
+                    if '%' in comp[branch][1][opern-1]:
+                        keyword += comp[branch][1][opern-1].split('%')[0]
+                    else:
+                        keyword += comp[branch][1][opern-1]
+                if '%' in comp[branch][1][opern+1]:
+                    keyword += '-'+comp[branch][1][opern+1].split('%')[0]
+                else:
+                    keyword += '-'+comp[branch][1][opern+1]
+                specbondlist.append([keyword, positc])
+    cyclist = []
     for cyclid in range(1, cyclec+1):
+        cyclist.append([])
         positc = -1
         checkbranch = 0
         cyclength = 0
@@ -115,11 +126,13 @@ def Basic_Functionalize(comp, cyclec):
                         depthop = comp[branch][0]
                     else:
                         cyclength -= branchpos
+                        cyclist[cyclid-1].append([branchst+1, branchend])
             elif checkbranch ==1:
                 if comp[branch][0]<comp[branch-1][0]:
                     cyclength = branchst+1
                 checkbranch +=1
             branchpos = 0
+            branchst = positc
             for opern in range(len(comp[branch][1])):
                 oper = comp[branch][1][opern]
                 if 'A'<= oper[0] <='Z':
@@ -128,12 +141,11 @@ def Basic_Functionalize(comp, cyclec):
                     if cycle:
                         cyclength += 1
                 if '%' in oper:
-                    print("Found cycle op")
-                    if oper.split('%')[1] == cyclid:
+                    if int(oper.split('%')[1]) == cyclid:
                         if not cycle:
                             cyclength = 1        
                             start = positc
-                            branchst = branchpos
+                            branchstcyc = branchpos
                             depthop = comp[branch][0]
                             cycle = True
                             if branch == 0:
@@ -142,10 +154,11 @@ def Basic_Functionalize(comp, cyclec):
                                 checkbranch +=1
                         elif cycle:
                             cycle = False
+                            end = positc
                             checkbranch +=1
-                print(cycle)
-                
-    return funclist, cyclength
+            branchend = positc
+        cyclist[cyclid-1].append([start, end, cyclength])
+    return specbondlist, cyclist
     
 
 #import pubchempy as pcp
