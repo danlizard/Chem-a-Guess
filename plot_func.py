@@ -8,19 +8,15 @@ def plotc(sm):
     inorgc =False    
     for i in range(0, len(sm)):        
         if sm[i] == '(':
-            if ringc:
-                ringc =False
-            if inorgc:
-                inorgc =False
+            ringc =False
+            inorgc =False
             comp_branch +=1
             depth +=1
             symbolc = -1   
             compound.append([depth, []])
         elif sm[i] ==')':
-            if ringc:
-                ringc =False
-            if inorgc:
-                inorgc =False
+            ringc =False
+            inorgc =False
             comp_branch +=1
             depth -=1 
             symbolc = -1
@@ -85,11 +81,21 @@ def basic_funct(comp, cyclec):
     comp_branch = 0
     specbondlist = []
     positc = -1
+    mainleng = [0]
+    maintog = True
     for branch in range(len(comp)):
         for opern in range(len(comp[branch][1])):
             oper = comp[branch][1][opern]
             if 'A'<= oper[0] <='Z':
                 positc +=1
+                if comp[branch][0] == 0:
+                    mainleng[0] +=1
+                    if not maintog: 
+                        mainleng[-1].append(opern)
+                        maintog = True
+                elif maintog:
+                    mainleng.append([opern])
+                    maintog = False                
             if oper in ['=', '#']:
                 if oper == '=':
                     keyword = 'doub-'
@@ -114,31 +120,45 @@ def basic_funct(comp, cyclec):
     for cyclid in range(1, cyclec+1):
         cyclist.append([])
         positc = -1
+        d_o_branchpos = 0
         checkbranch = 0
         cyclength = 0
         cycle = False
         for branch in range(len(comp)):
             if checkbranch ==2:
-                if comp[branch][0]<comp[branch-1][0]:
+                local_d_o[0] = comp[branch][0]
+                if local_d_o[0]>depthop and not local_d_o[1]:
+                    local_d_o[1] = True
+                    branchst = positc
+                elif comp[branch][0]<comp[branch-1][0]:
                     if comp[branch][0]<depthop:
                         depthop = comp[branch][0]
+                        d_o_branchpos = 0
                     else:
                         cyclength -= branchpos
+                        d_o_branchpos -= branchpos
+                        if local_d_o[0] == depthop and local_d_o[1]:
+                            cyclength -= d_o_branchpos
+                            d_o_branchpos = 0
+                            local_d_o[1] = False
                         cyclist[cyclid-1].append([branchst+1, branchend])
             elif checkbranch ==1:
                 if comp[branch][0]<comp[branch-1][0]:
                     cyclength = branchstcyc+1
-                    start = start-branchstcyc
+                    start = start -branchstcyc
                     if depthop>0:
                         depthop -=1
                 checkbranch =2
             branchpos = 0
-            branchst = positc
             for opern in range(len(comp[branch][1])):
                 oper = comp[branch][1][opern]
                 if 'A'<= oper[0] <='Z':
                     positc +=1
                     branchpos +=1
+                    if checkbranch != 0:
+                        if comp[branch][0]>depthop:
+                            d_o_branchpos +=1
+                    print(d_o_branchpos, positc)
                     if cycle:
                         cyclength += 1
                 if '%' in oper:
@@ -148,6 +168,7 @@ def basic_funct(comp, cyclec):
                             start = positc
                             branchstcyc = branchpos
                             depthop = comp[branch][0]
+                            local_d_o = [depthop, False]
                             cycle = True
                             if branch == 0:
                                 checkbranch +=2
@@ -159,12 +180,12 @@ def basic_funct(comp, cyclec):
                             checkbranch +=1
             branchend = positc
         cyclist[cyclid-1].append([start, end, cyclength])
-    return specbondlist, cyclist
+    return specbondlist, cyclist, mainleng
     
 
 if __name__ == "__main__" :
     canonsm = input()
-    compound, cyclec = Plot(canonsm)
+    compound, cyclec = plotc(canonsm)
     print(compound)
     print(cyclec)
-    print(Basic_Functionalize(compound, cyclec))
+    print(basic_funct(compound, cyclec))
