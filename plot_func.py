@@ -3,6 +3,7 @@ def plotc(sm):
     depth = 0
     comp_branch = 0
     symbolc = -1
+    atomlist = []
     cyclec =0
     ringc =False
     inorgc =False    
@@ -45,16 +46,19 @@ def plotc(sm):
                     inorgc =True
                     symbolc += 1
                     compound[comp_branch][1].append('')
+                    atomlist.append('')
                 elif ('A'<= sm[i] <='Z') and inorgc:
                     compound[comp_branch][1][symbolc] += sm[i]
                     if i+4 < len(sm):
                         if (']' not in sm[i:i+5]) and ('[' not in sm[i:i+5]):
                             inorgc = False
+                    atomlist[-1] += sm[i]
                 elif ('a'<= sm[i] <='z') and inorgc:
                     compound[comp_branch][1][symbolc] += sm[i]
                     if i+4 < len(sm):
                         if ']' not in sm[i:i+5] and '[' not in sm[i:i+5]:
-                            inorgc = False                   
+                            inorgc = False                  
+                    atomlist[-1] += sm[i]
                 elif sm[i] == ']':
                     inorgc = False
                 elif ('A'<= sm[i] <='Z') or ('a'<= sm[i] <='z') and not inorgc:
@@ -62,6 +66,7 @@ def plotc(sm):
                     if sm[i] != 'r' and sm[i] != 'l':
                         symbolc += 1
                     compound[comp_branch][1][symbolc] += sm[i]
+                    atomlist.append(sm[i])
                 elif sm[i] == '-' or sm[i] == '+' and inorgc:
                     if '1' <= sm[i+1] <= '9':
                         ringc = True
@@ -75,32 +80,37 @@ def plotc(sm):
     if cyclec%2 != 0:
         return "Error due to uneven cycle "
     else:
-        return compound, cyclec//2
+        return compound, cyclec//2, atomlist
+
 
 def basic_funct(comp, cyclec):
     comp_branch = 0
     specbondlist = []
     positc = -1
     mainleng = [0]
+    specatoms = []
     maintog = True
     for branch in range(len(comp)):
         for opern in range(len(comp[branch][1])):
             oper = comp[branch][1][opern]
             if 'A'<= oper[0] <='Z':
                 positc +=1
-                if comp[branch][0] == 0:
+                if oper[0] in ['N', 'O']:
+                    specatoms.append([positc, oper[0]])
+                if comp[branch][0] == 0 and maintog:
                     mainleng[0] +=1
-                    if not maintog: 
-                        mainleng[-1].append(opern)
-                        maintog = True
-                elif maintog:
-                    mainleng.append([opern])
-                    maintog = False                
+                elif comp[branch][0]>0 and maintog:
+                        mainleng.append([positc])
+                        maintog = False
+                elif comp[branch][0] == 0 and not maintog:
+                    mainleng[-1].append(positc-1)
+                    maintog = True              
+                    mainleng[0] +=1
             if oper in ['=', '#']:
                 if oper == '=':
-                    keyword = 'doub-'
+                    keyword = 'd-'
                 elif oper== '#':
-                    keyword = 'trip-'
+                    keyword = 't-'
                 if opern == 0:
                     if '%' in comp[branch-1][1][-1]:
                         keyword += comp[branch-1][1][-1].split('%')[0]
@@ -158,7 +168,6 @@ def basic_funct(comp, cyclec):
                     if checkbranch != 0:
                         if comp[branch][0]>depthop:
                             d_o_branchpos +=1
-                    print(d_o_branchpos, positc)
                     if cycle:
                         cyclength += 1
                 if '%' in oper:
@@ -180,12 +189,50 @@ def basic_funct(comp, cyclec):
                             checkbranch +=1
             branchend = positc
         cyclist[cyclid-1].append([start, end, cyclength])
-    return specbondlist, cyclist, mainleng
+    return specbondlist, cyclist, mainleng, specatoms
     
+
+def add_funct(bonds, cycles, skel, specat, atoms, comp):
+    funclist = [skel[0]]
+    conjug = []
+    construct = []
+    mainline = []
+    mainop = []
+    for i in range(1, len(skel)):
+        mainop.append(range(skel[i][0], skel[i][1]))
+    for pos in range(atoms):
+        neg = False
+        for rng in mainop:
+            if pos in rng:
+                neg = True
+        if not neg:
+            mainline.apend(atoms[pos])
+    funclist.append(mainline)
+    typ, ap1, ap2 = bonds[0][0].split('-')
+    a1, a2 = ap1, ap2
+    if len(bonds)>1:
+        conj = False
+        for i in range(1, len(bonds)):
+            ap1, ap2 = a1, a2
+            typ, a1, a2 = bonds[i][0].split('-')
+            if bonds[i][1] == bonds[i-1][1]+2:
+                if not conj:
+                    conjug.append([bonds[i-1][1]])
+                    conj = True
+            elif conj:
+                conj = False
+                conjug[-1].append(bonds[i][1]+1)
+    #for i in range(len(bonds)):
+    return funclist
+
 
 if __name__ == "__main__" :
     canonsm = input()
-    compound, cyclec = plotc(canonsm)
+    compound, cyclec, atoms = plotc(canonsm)
+    print(atoms)
     print(compound)
     print(cyclec)
-    print(basic_funct(compound, cyclec))
+    bonds, cycles, skel, specat = basic_funct(compound, cyclec)
+    print(bonds)
+    funclist = add_funct(bonds, cycles, skel, specat, atoms, compound)
+    
