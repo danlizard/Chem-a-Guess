@@ -8,15 +8,16 @@ def FindSection(l,nameofsec):
       if el['TOCHeading']==nameofsec:
           return el
 
-def GetInf(l):
-    R=None
+def get_info(section_info):
+    '''section_info is a dictionary of format {"Information": [...]}'''
+    R = None
     try:
-        R=l['Information'][0]['Value']['StringWithMarkup'][0]['String']
-        X=re.search(r'(\d+(\.\d+)?)\s*°?([KFC])\b',R).groups()
+        R = section_info['Information'][0]['Value']['StringWithMarkup'][0]['String']
+        X = re.search(r'(\d+(\.\d+)?)\s*°?([KFC])\b', R).groups()
        # print('qq3')
        # print(X)
-        if X[2]=='C':
-            R=float(X[0])+273
+        if X[2] == 'C':
+            R = float(X[0])+273
            # print('qq')
         elif X[2]=='F':
            # print(X[0],'xo')
@@ -82,8 +83,8 @@ def stantartrun(start,end):
         Melt=FindSection(e5,'Melting Point')
         Boil=FindSection(e5,'Boiling Point')
         Solu=FindSection(e5,'Solubility')
-        # Inf={'Melt':GetInf(Melt),'Boil':GetInf(Boil),'Solu':GetSolub(Solu),'CID':i}
-        Inf={'Melt':GetInf(Melt),'Boil':GetInf(Boil),'CID':i}
+        # Inf={'Melt':get_info(Melt),'Boil':get_info(Boil),'Solu':GetSolub(Solu),'CID':i}
+        Inf={'Melt':get_info(Melt),'Boil':get_info(Boil),'CID':i}
         print(Inf)
         #f = open('text.txt', 'a')
         if Inf['Melt']!=None and Inf['Boil']!=None:
