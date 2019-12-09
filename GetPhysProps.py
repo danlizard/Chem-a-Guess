@@ -29,6 +29,26 @@ def GetInf(l):
         pass
     #print(R)
     return R
+
+
+
+# def GetSolub(l):
+#     R=None
+#     try:
+#         R=l['Information'][0]['Value']['StringWithMarkup'][0]['String']
+#         X=re.search(r'(\d+(\.\d+)?)\s*°?([mg])\b',R).groups()
+#         print('qq3')
+#         print(X)
+#         R=float(X[0])
+#
+#     except:
+#         #print('Err:', l)
+#         pass
+#     #print(R)
+#     return R
+
+
+
 def stantartrun(start,end):
     f = open('text.txt', 'w')
 
@@ -61,20 +81,19 @@ def stantartrun(start,end):
         #print(e5)
         Melt=FindSection(e5,'Melting Point')
         Boil=FindSection(e5,'Boiling Point')
-        #Solu=FindSection(e5,'Solubility')
+        Solu=FindSection(e5,'Solubility')
+        # Inf={'Melt':GetInf(Melt),'Boil':GetInf(Boil),'Solu':GetSolub(Solu),'CID':i}
         Inf={'Melt':GetInf(Melt),'Boil':GetInf(Boil),'CID':i}
         print(Inf)
         #f = open('text.txt', 'a')
         if Inf['Melt']!=None and Inf['Boil']!=None:
             print(Inf, file=f)
-
-
-
-
     f.close()
 
-
-#,'Solu':GetInf(Solu)
+if __name__ == "__main__":
+    x=int(input())
+    y=int(input())
+    stantartrun(x,y)
 
 
 
