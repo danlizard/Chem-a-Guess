@@ -229,12 +229,22 @@ def add_funct(bonds, cycles, skel, specat, atoms, comp):
         construct.append([typ, a1, a2])
     for oper in specat:
         locat, atom = oper[0], oper[1]
-        while locat-1 in construct:
+        if locat-1 in construct:
             sec = construct.pop(construct.index(locat-1)+1)
             construct.pop(construct.index(locat-1))
-            funclist.append([(locat-1), atom+sec[1]+sec[0]+sec[2]])
+            if locat-1 in construct:
+                funclist.append([(locat-1), atom+sec[1]+sec[0]+sec[2]])
+                while locat-1 in construct:
+                    sec = construct.pop(construct.index(locat-1)+1)
+                    construct.pop(construct.index(locat-1))
+                    funclist.append([(locat-1), atom+sec[1]+sec[0]+sec[2]])
+            else:
+                funclist.append([locat-1, sec[1]+sec[0]+sec[2]])
+            specat.pop(specat.index(oper))
     for i in range(0, len(construct), 2):
         funclist.append([construct[i], construct[i+1][1]+construct[i+1][0]+construct[i+1][2]])
+    for i in range(0, len(specat)):
+        funclist.append([specat[i][0]-1, atoms[specat[i][0]-1]+'s'+specat[i][1]])
     return funclist
 
 
