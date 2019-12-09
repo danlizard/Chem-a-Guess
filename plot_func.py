@@ -196,25 +196,24 @@ def add_funct(bonds, cycles, skel, specat, atoms, comp):
     funclist = [skel[0]]
     conjug = []
     construct = []
-    mainline = []
+    mainline = ''
     mainop = []
     for i in range(1, len(skel)):
         mainop.append(range(skel[i][0], skel[i][1]))
-    for pos in range(atoms):
+    for pos in atoms:
         neg = False
         for rng in mainop:
             if pos in rng:
                 neg = True
         if not neg:
-            mainline.apend(atoms[pos])
+            mainline += pos
     funclist.append(mainline)
-    typ, ap1, ap2 = bonds[0][0].split('-')
+    typ, ap1, ap2= bonds[0][0].split('-')
+    loc = bonds[0][1]
     a1, a2 = ap1, ap2
     if len(bonds)>1:
         conj = False
         for i in range(1, len(bonds)):
-            ap1, ap2 = a1, a2
-            typ, a1, a2 = bonds[i][0].split('-')
             if bonds[i][1] == bonds[i-1][1]+2:
                 if not conj:
                     conjug.append([bonds[i-1][1]])
@@ -222,7 +221,20 @@ def add_funct(bonds, cycles, skel, specat, atoms, comp):
             elif conj:
                 conj = False
                 conjug[-1].append(bonds[i][1]+1)
-    #for i in range(len(bonds)):
+    for i in range(len(bonds)):
+        ap1, ap2 = a1, a2
+        typ, a1, a2 = bonds[i][0].split('-')
+        loc = bonds[i][1]
+        construct.append(loc)
+        construct.append([typ, a1, a2])
+    for oper in specat:
+        locat, atom = oper[0], oper[1]
+        while locat-1 in construct:
+            sec = construct.pop(construct.index(locat-1)+1)
+            construct.pop(construct.index(locat-1))
+            funclist.append([(locat-1), atom+sec[1]+sec[0]+sec[2]])
+    for i in range(0, len(construct), 2):
+        funclist.append([construct[i], construct[i+1][1]+construct[i+1][0]+construct[i+1][2]])
     return funclist
 
 
@@ -235,4 +247,5 @@ if __name__ == "__main__" :
     bonds, cycles, skel, specat = basic_funct(compound, cyclec)
     print(bonds)
     funclist = add_funct(bonds, cycles, skel, specat, atoms, compound)
+    print(funclist)
     
