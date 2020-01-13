@@ -3,15 +3,19 @@ def local_retr(cid):
     smiles = op['CanonicalSMILES']
     name = op['IUPACName']
     qual = get_second_layer_props(cid, ['Melting Point', 'Boiling Point'])
+    dgr = chr(176)
+    print(qual)
     if 'Boiling Point' in qual.keys():
         boiltemp = []
         for el in qual['Boiling Point']:
             op = el['Value']
+            print(op)
             if 'StringWithMarkup' in op.keys():
                 op = op['StringWithMarkup'][0]['String']
                 if 'C' in op:
-                    op = (''.join(op.split(' '))).split('°')[0]
-                    if '-' in op:
+                    op = (''.join(op.split(' '))).split(dgr)[0]
+                    
+                    if '-' in op and op[0] != '-':
                         op = op.split('-')
                         op = (float(op[0])+float(op[1]))/2
                     else:
@@ -30,7 +34,7 @@ def local_retr(cid):
             if 'StringWithMarkup' in op.keys():
                 op = op['StringWithMarkup'][0]['String']
                 if 'C' in op:
-                    op = (''.join(op.split(' '))).split('°')[0]
+                    op = (''.join(op.split(' '))).split(dgr)[0]
                     if '-' in op and op[0] != '-':
                         op = op.split('-')
                         op = (float(op[0])+float(op[1]))/2
@@ -44,7 +48,7 @@ def local_retr(cid):
     else:
         return 'MissingInfoError'
     qual = 'Melting Point = '+melttemp+'; '+'Boiling Point = '+boiltemp
-    return name+'^^'+smiles+'^^'+qual
+    return [name, smiles, qual]
 """
 def opt_local_retr(cid, addit=None, opt='Melting Point, Boiling Point'):
     name = (pcp.Compound.from_cid(cid)).iupac_name
@@ -73,36 +77,27 @@ def local_onepack(namefile='names.txt', qualfile='quals.txt', funcfile='rawfuncs
     current.close()
     return None
 """
-def local_streampack(namepath, qualpath, funcpath, *arg):
+def local_streampack(filepath, *arg):
     if arg == None:
         raise TypeError('EmptyPackageError')
-    name, func, quals = arg
-    print(name, file=namepath)
-    print(quals, file=qualpath)
-    print(func, file=funcpath)
+    print(arg, file=filepath)
     return None    
 
 def local_Core(cidop, cidend, specs=None):
     if specs != None and 'functionalise' not in specs:
         raise NameError('Not_Implemented_Yet_Im_Sorry')
     error = 0
-    namepath = 'localdata\\names.txt'
-    funcpath = 'localdata\\rawfuncs.txt'
-    qualpath = 'localdata\\quals.txt'
-    currentname = open(namepath, 'a')
-    currentfunc = open(funcpath, 'a')
-    currentqual = open(qualpath, 'a')    
+    filepath = 'localdata\\datasheet.txt'
+    current = open(filepath, 'a')
     while cidop<cidend:
         arg = local_retr(cidop)
         if 'Error' in arg:
             error +=1
         else:
-            name, func, quals = arg.split('^^')
-            local_streampack(currentname, currentqual, currentfunc, name, func, quals)
+            arg = '	'.join(arg)
+            local_streampack(current, arg)
         cidop+=1
-    currentname.close()
-    currentfunc.close()
-    currentqual.close()
+    current.close()
     return error
     
 if __name__ == '__main__':

@@ -1,0 +1,19 @@
+dictfunc.py (Dictionary Functionaliser):
+1. function prep_length: Accepts any SMILES, returns main branch length.
+2. function prep_group: Accepts SMILES, returns prepared and stripped SMILES (prSMILES) as well as the number of cycles.
+3. function ident_group: Accepts prSMILES and group dictionaries*, returns a list of the functional groups of the molecule.
+*IS DEPENDENT ON: dicts_forfunc.py, which must be imported alongside dictfunc.py and passed on to the ident_group function.
+
+localfunc.py (Local Functions):
+1. function local_Core: Accepts a range of CIDs to request with and specifications (currently no specifications are supported), returns the number of errors - the number of compounds that did not contain all of the information initially requested.
+2. function local_retr: Accepts CID (as listed on PubChem), returns a list with 3 objects - IUPAC name, SMILES and the requested compound properties listed like "property1 = x ; property2 = y" in a string.
+3. function local_streampack: Accepts a filepath and data to write there (raises an error if no data is given), returns nothing.
+IS DEPENDENT ON: pubchemprops.py and pubchempy(lib), which need to be imported alongside localfunc.py.
+
+pubchemprops.py:
+1. function get_first_layer_props: Accepts CID (as listed on PubChem) and identifiers of properties available for EASY requesting as per pcprops.txt, returns a dictionary with requested properties as keys and the respective data fragments as dictionary objects.
+2. function get_second_layer_props: Accepts CID (as listed on PubChem) and identifiers of properties available for HARD requesting as per pcprops.txt, returns a dictionary with requested properties as keys and the respective data fragments as dictionary objects.
+The functions are dependent on urllib.request(lib) and json(lib), but load them by themselves.
+
+core.py:
+is currently not available and unfinished.
