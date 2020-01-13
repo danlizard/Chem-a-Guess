@@ -1,3 +1,15 @@
+def prep_length(smiles):
+	length = 0
+	depth = 1
+	for sym in smiles:
+		if sym == '(':
+			depth +=1 
+		elif sym == ')':
+			depth -=1 
+		elif ij in 'QWERTYUIOPASDFGHJKLZXCVBNM' and bra:
+			length +=1
+	return length
+
 def prep_group(smiles):
     num = '1234567890%'
     addsym = '+=-#()[]*^@$:'
