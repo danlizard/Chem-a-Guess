@@ -3,7 +3,6 @@ def local_retr(cid):
     smiles = op['CanonicalSMILES']
     name = op['IUPACName']
     qual = get_second_layer_props(cid, ['Melting Point', 'Boiling Point'])
-    print(qual)
     if 'Boiling Point' in qual.keys():
         boiltemp = []
         for el in qual['Boiling Point']:
@@ -32,7 +31,7 @@ def local_retr(cid):
                 op = op['StringWithMarkup'][0]['String']
                 if 'C' in op:
                     op = (''.join(op.split(' '))).split('°')[0]
-                    if '-' in op:
+                    if '-' in op and op[0] != '-':
                         op = op.split('-')
                         op = (float(op[0])+float(op[1]))/2
                     else:
