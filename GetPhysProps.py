@@ -5,8 +5,8 @@ import re
 
 def FindSection(l,nameofsec):
     for el in l:
-      if el['TOCHeading']==nameofsec:
-          return el
+        if el['TOCHeading']==nameofsec:
+            return el
 
 def get_info(section_info):
     '''section_info is a dictionary of format {"Information": [...]}'''
