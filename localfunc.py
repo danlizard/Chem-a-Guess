@@ -3,33 +3,44 @@ def local_retr(cid):
     smiles = op['CanonicalSMILES']
     name = op['IUPACName']
     qual = get_second_layer_props(cid, ['Melting Point', 'Boiling Point'])
+    print(qual)
     if 'Boiling Point' in qual.keys():
         boiltemp = []
         for el in qual['Boiling Point']:
-            op = el['Value']['StringWithMarkup'][0]['String']
-            if 'C' in op:
-                op = (''.join(op.split(' '))).split('°')[0]
-                if '-' in op:
-                    op = op.split('-')
-                    op = (float(op[0])+float(op[1]))/2
-                else:
-                    op = float(op)
-                boiltemp.append(op)
+            op = el['Value']
+            if 'StringWithMarkup' in op.keys():
+                op = op['StringWithMarkup'][0]['String']
+                if 'C' in op:
+                    op = (''.join(op.split(' '))).split('°')[0]
+                    if '-' in op:
+                        op = op.split('-')
+                        op = (float(op[0])+float(op[1]))/2
+                    else:
+                        op = float(op)
+                    boiltemp.append(op)
+            elif 'Number' in op.keys():
+                if 'C' in op['Unit']:
+                    boiltemp.append(float(op['Number'][0]))
         boiltemp = str(sum(boiltemp)/len(boiltemp))
     else:
         return 'MissingInfoError'
     if 'Melting Point' in qual.keys():
         melttemp = []
         for el in qual['Melting Point']:
-            op = el['Value']['StringWithMarkup'][0]['String']
-            if 'C' in op:
-                op = (''.join(op.split(' '))).split('°')[0]
-                if '-' in op:
-                    op = op.split('-')
-                    op = (float(op[0])+float(op[1]))/2
-                else:
-                    op = float(op)
-                melttemp.append(op)                
+            op = el['Value']
+            if 'StringWithMarkup' in op.keys():
+                op = op['StringWithMarkup'][0]['String']
+                if 'C' in op:
+                    op = (''.join(op.split(' '))).split('°')[0]
+                    if '-' in op:
+                        op = op.split('-')
+                        op = (float(op[0])+float(op[1]))/2
+                    else:
+                        op = float(op)
+                    melttemp.append(op)
+            elif 'Number' in op.keys():
+                if 'C' in op['Unit']:
+                    melttemp.append(float(op['Number'][0]))              
         melttemp = str(sum(melttemp)/len(melttemp))
     else:
         return 'MissingInfoError'
