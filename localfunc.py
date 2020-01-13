@@ -11,8 +11,8 @@ def local_retr(cid):
             if 'StringWithMarkup' in op.keys():
                 op = op['StringWithMarkup'][0]['String']
                 if 'C' in op:
-                    op = (''.join(op.split(' '))).split('°')[0]
-                    if '-' in op:
+                    op = (''.join(op.split(' '))).split('ï¿½')[0]
+                    if '-' in op and op[0] != '-':
                         op = op.split('-')
                         op = (float(op[0])+float(op[1]))/2
                     else:
@@ -31,8 +31,8 @@ def local_retr(cid):
             if 'StringWithMarkup' in op.keys():
                 op = op['StringWithMarkup'][0]['String']
                 if 'C' in op:
-                    op = (''.join(op.split(' '))).split('°')[0]
-                    if '-' in op:
+                    op = (''.join(op.split(' '))).split('ï¿½')[0]
+                    if '-' in op and op[0] != '-':
                         op = op.split('-')
                         op = (float(op[0])+float(op[1]))/2
                     else:
