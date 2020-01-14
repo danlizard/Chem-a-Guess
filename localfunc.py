@@ -4,21 +4,20 @@ def local_retr(cid):
     name = op['IUPACName']
     qual = get_second_layer_props(cid, ['Melting Point', 'Boiling Point'])
     dgr = chr(176)
-    print(qual)
     if 'Boiling Point' in qual.keys():
         boiltemp = []
         for el in qual['Boiling Point']:
             op = el['Value']
-            print(op)
             if 'StringWithMarkup' in op.keys():
                 op = op['StringWithMarkup'][0]['String']
                 if 'C' in op:
                     op = (''.join(op.split(' '))).split(dgr)[0]
-                    
                     if '-' in op and op[0] != '-':
+                        op = op.split(':')[-1]
                         op = op.split('-')
                         op = (float(op[0])+float(op[1]))/2
                     else:
+                        op = op.split(':')[-1]
                         op = float(op)
                     boiltemp.append(op)
             elif 'Number' in op.keys():
@@ -36,9 +35,11 @@ def local_retr(cid):
                 if 'C' in op:
                     op = (''.join(op.split(' '))).split(dgr)[0]
                     if '-' in op and op[0] != '-':
+                        op = op.split(':')[-1]
                         op = op.split('-')
                         op = (float(op[0])+float(op[1]))/2
                     else:
+                        op = op.split(':')[-1]
                         op = float(op)
                     melttemp.append(op)
             elif 'Number' in op.keys():
@@ -84,25 +85,44 @@ def local_streampack(filepath, *arg):
     return None    
 
 def local_Core(cidop, cidend, specs=None):
-    if specs != None and 'functionalise' not in specs:
+    prntr = False
+    if specs != None and '>console' not in specs:
         raise NameError('Not_Implemented_Yet_Im_Sorry')
-    error = 0
-    filepath = 'localdata\\datasheet.txt'
-    current = open(filepath, 'a')
+    elif '>console' in specs:
+        prntr = True
+    minor = 0
+    major = 0
+    stat = cidend-cidop
+    datapath = 'localdata\\datasheet.txt'
+    current = open(datapath, 'a')
     while cidop<cidend:
-        arg = local_retr(cidop)
-        if 'Error' in arg:
-            error +=1
-        else:
-            arg = '	'.join(arg)
-            local_streampack(current, arg)
+        try:
+            arg = local_retr(cidop)
+            if 'Error' in arg:
+                minor +=1
+            else:
+                arg = '	'.join(arg)
+                local_streampack(current, arg)
+                arg = 'Packed'
+        except:
+            major +=1
+            arg = 'FUNCTION ERROR'
+        if prntr:
+            print(cidop, 'as follows:')
+            print(arg)
+            print('')
         cidop+=1
     current.close()
-    return error
+    if prntr:
+        print('Encountered lack of info', minor, 'times')
+        print('Encountered major problems', major, 'times')
+        print('per', stat, 'runs')
+    return None
     
 if __name__ == '__main__':
     from pubchemprops import get_first_layer_props
     from pubchemprops import get_second_layer_props
     import pubchempy as pcp
     cidstart, cidend = map(int,input().split())
-    print('Run with', local_Core(cidstart, cidend), 'errors')
+    local_Core(cidstart, cidend, '>console')
+    stopper = input()
