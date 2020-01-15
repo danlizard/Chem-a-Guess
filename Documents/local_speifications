@@ -1,0 +1,12 @@
+>nodata:
+If this is passed on to the program, it won't save any of the compound information it retrieves.
+>console:
+If this is passed on to the program, it will print feedback from every compound operation in the Python console.
+>onlycrashnotes:
+If this is passed on to the program, it will only returns function error messages within feedback.
+>writedatato-ARGUMENT< :
+If this is passed on to the program, it will save retrieved data to the ARGUMENT.txt file (datasheet.txt by default) within the local directory.
+>keeplogat-ARGUMENT< :
+If this is passed on to the program, it will save feedback from every compound operation in the ARGUMENT.txt (disabled by default) within the local directory.
+>changebaseto-ARGUMENT< :
+If this is passed on to the program, it will change the folder for all of the files it creates (localdata by default, which is ignored by Github).
