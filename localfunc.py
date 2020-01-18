@@ -3,175 +3,12 @@ def local_retr(cid):
     smiles = op['CanonicalSMILES']
     name = op['IUPACName']
     qual = get_second_layer_props(cid, ['Melting Point', 'Boiling Point'])
-    dgr = chr(176)
-    decboil = False
-    decmelt = False
     if 'Boiling Point' in qual.keys():
-        boiltemp = []
-        for el in qual['Boiling Point']:
-            op = el['Value']
-            if 'StringWithMarkup' in op.keys():
-                op = op['StringWithMarkup'][0]['String']
-                if 'ecomposes' in op:
-                    decboil = True
-                    if op == 'Decomposes':
-                        op = 'Pass'
-                if dgr in op:
-                    op = op.split(dgr)
-                    un = op[1][0]
-                    op = op[0]
-                    op = op.strip(' ')
-                    op = op.split(':')[-1]
-                    op = ''.join(op.split('>'))
-                    op = ''.join(op.split('<'))
-                    if ' to ' in op:
-                        op = op.split(' to ')
-                        op1, op2 = min(float(op[0]), float(op[1])), max(float(op[0]), float(op[1]))
-                        if op1<0 and op2>0:
-                            if abs(op1)<abs(op2):
-                                op1 = abs(op1)
-                            elif abs(op1)>abs(op2):
-                                op2 = 0-op2
-                        op = (op1+op2)/2
-                    elif ' - ' in op or '-' in op:
-                        if ' - ' in op:
-                            op = op.split(' - ')
-                        elif op[0] != '-':
-                            op = op.split('-')
-                        op1, op2 = min(float(op[0]), float(op[1])), max(float(op[0]), float(op[1]))
-                        if op1<0 and op2>0:
-                            if abs(op1)<abs(op2):
-                                op1 = abs(op1)
-                            elif abs(op1)>abs(op2):
-                                op2 = 0-op2
-                        op = (op1+op2)/2
-                    else:
-                        op = float(op)
-                    if un == 'F':
-                        op = (op-32)*5/9
-                else:
-                    if ' to ' in op:
-                        op = op.split(' to ')
-                        op1, op2 = min(float(op[0]), float(op[1])), max(float(op[0]), float(op[1]))
-                        if op1<0 and op2>0:
-                            if abs(op1)<abs(op2):
-                                op1 = abs(op1)
-                            elif abs(op1)>abs(op2):
-                                op2 = 0-op2
-                        op = (op1+op2)/2
-                    elif ' - ' in op:
-                        op = op.split(' - ')
-                        op1, op2 = min(float(op[0]), float(op[1])), max(float(op[0]), float(op[1]))
-                        if op1<0 and op2>0:
-                            if abs(op1)<abs(op2):
-                                op1 = abs(op1)
-                            elif abs(op1)>abs(op2):
-                                op2 = 0-op2
-                        op = (op1+op2)/2
-                    elif op != 'Pass':
-                        op = float(op)
-                if op != 'Pass':
-                    boiltemp.append(op)
-            elif 'Number' in op.keys():
-                if 'C' in op['Unit']:
-                    boiltemp.append(float(op['Number'][0]))
-                elif 'F' in op['Unit']:
-                    boiltemp.append((float(op['Number'][0])-32)*5/9)
-                else:
-                    try:
-                        boiltemp.append(float(op['Number'][0]))
-                    except:
-                        pass
-        if boiltemp != []:
-            boiltemp = str(sum(boiltemp)/len(boiltemp))
-            if decboil:
-                boiltemp += ' and decomposes'
-        else:
-            return 'MissingInfo'
+        boiltemp = str(parse_temperature(qual['Boiling Point']))
     else:
         return 'MissingInfo'
     if 'Melting Point' in qual.keys():
-        melttemp = []
-        for el in qual['Melting Point']:
-            op = el['Value']
-            if 'StringWithMarkup' in op.keys():
-                op = op['StringWithMarkup'][0]['String']
-                if 'ecomposes' in op:
-                    decmelt = True
-                    if op == 'Decomposes':
-                        op = 'Pass'
-                if dgr in op:
-                    op = op.split(dgr)
-                    un = op[1][0]
-                    op = op[0]
-                    op = op.strip(' ')
-                    op = op.split(':')[-1]
-                    op = ''.join(op.split('>'))
-                    op = ''.join(op.split('<'))                    
-                    if ' to ' in op:
-                        op = op.split(' to ')
-                        op1, op2 = min(float(op[0]), float(op[1])), max(float(op[0]), float(op[1]))
-                        if op1<0 and op2>0:
-                            if abs(op1)<abs(op2):
-                                op1 = abs(op1)
-                            elif abs(op1)>abs(op2):
-                                op2 = 0-op2
-                        op = (op1+op2)/2
-                    elif ' - ' in op or '-' in op:
-                        if ' - ' in op:
-                            op = op.split(' - ')
-                        elif op[0] != '-':
-                            op = op.split('-')
-                        op1, op2 = min(float(op[0]), float(op[1])), max(float(op[0]), float(op[1]))
-                        if op1<0 and op2>0:
-                            if abs(op1)<abs(op2):
-                                op1 = abs(op1)
-                            elif abs(op1)>abs(op2):
-                                op2 = 0-op2
-                        op = (op1+op2)/2
-                    else:
-                        op = float(op)
-                    if un == 'F':
-                        op = (op-32)*5/9
-                else:
-                    if ' to ' in op:
-                        op = op.split(' to ')
-                        op1, op2 = min(float(op[0]), float(op[1])), max(float(op[0]), float(op[1]))
-                        if op1<0 and op2>0:
-                            if abs(op1)<abs(op2):
-                                op1 = abs(op1)
-                            elif abs(op1)>abs(op2):
-                                op2 = 0-op2
-                        op = (op1+op2)/2
-                    elif ' - ' in op:
-                        op = op.split(' - ')
-                        op1, op2 = min(float(op[0]), float(op[1])), max(float(op[0]), float(op[1]))
-                        if op1<0 and op2>0:
-                            if abs(op1)<abs(op2):
-                                op1 = abs(op1)
-                            elif abs(op1)>abs(op2):
-                                op2 = 0-op2
-                        op = (op1+op2)/2
-                    elif op != 'Pass':
-                        op = float(op)
-                if op != 'Pass':
-                    melttemp.append(op)
-            elif 'Number' in op.keys():
-                if 'C' in op['Unit']:
-                    melttemp.append(float(op['Number'][0]))
-                elif 'F' in op['Unit']:
-                    melttemp.append((float(op['Number'][0])-32)*5/9)
-                else:
-                    try:
-                        melttemp.append(float(op['Number'][0]))
-                    except:
-                        pass
-        if melttemp != []:
-            melttemp = str(sum(melttemp)/len(melttemp))
-            if decmelt:
-                melttemp += ' and decomposes'
-        else:
-            return 'MissingInfo'
+        melttemp = str(parse_temperature(qual['Boiling Point']))
     else:
         return 'MissingInfo'
     qual = 'Melting Point = '+melttemp+'; '+'Boiling Point = '+boiltemp
@@ -211,6 +48,7 @@ def local_streampack(filepath, *arg):
     return None    
 
 def local_Core(cidop, cidend, specs=None):
+    errorlist = ['MissingInfo']
     database = 'localdata\\'
     datapath = database+'datasheet.txt'
     prntr = False
@@ -243,7 +81,7 @@ def local_Core(cidop, cidend, specs=None):
     while cidop<cidend:
         try:
             arg = local_retr(cidop)
-            if 'Error' in arg:
+            if arg in errorlist:
                 minor +=1
             else:
                 arg = '	'.join(arg)
@@ -287,6 +125,7 @@ def local_Core(cidop, cidend, specs=None):
 if __name__ == '__main__':
     from pubchemprops import get_first_layer_props
     from pubchemprops import get_second_layer_props
+    from localparse import *
     import pubchempy as pcp
     print('CIDs to start and end with')
     cidstart, cidend = map(int,input().split())
