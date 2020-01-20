@@ -17,7 +17,7 @@ func_dict = {
     
     'C#N':'Nitrile',
     'C=N':'Imine',
-    'CNO2':'Nitro',
+    'C[N+](=O)[O-]':'Nitro',
     
     
     'CN()C':'Amine-T',
