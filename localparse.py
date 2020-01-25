@@ -1,91 +1,74 @@
 def parse_SMILES(arg):
-    return arg[0]['Value']['StringWithMarkup'][0]['String']
+    return arg['Value']['StringWithMarkup'][0]['String']
 
 def parse_IUPAC(arg):
-    return arg[0]['Value']['StringWithMarkup'][0]['String']
+    return arg['Value']['StringWithMarkup'][0]['String']
 
-def parse_temperature(arg):
+def parse_temp(arg):
+    num = '1234567890-.'
     decomp = False
     dgr = chr(176)
     templist = []
     for el in arg:
-            op = el['Value']
-            if 'StringWithMarkup' in op.keys():
-                op = op['StringWithMarkup'][0]['String']
-                if 'ecomposes' in op:
-                    decomp = True
-                    if op == 'Decomposes':
-                        op = 'Pass'
-                if dgr in op:
-                    op = op.split(dgr)
-                    un = op[1][0]
-                    op = op[0]
-                    op = op.strip(' ')
-                    op = op.split(':')[-1]
-                    op = ''.join(op.split('>'))
-                    op = ''.join(op.split('<'))
-                    if ' to ' in op:
-                        op = op.split(' to ')
-                        op1, op2 = min(float(op[0]), float(op[1])), max(float(op[0]), float(op[1]))
-                        if op1<0 and op2>0:
-                            if abs(op1)<abs(op2):
-                                op1 = abs(op1)
-                            elif abs(op1)>abs(op2):
-                                op2 = 0-op2
-                        op = (op1+op2)/2
-                    elif ' - ' in op or '-' in op:
-                        if ' - ' in op:
-                            op = op.split(' - ')
-                        elif op[0] != '-':
-                            op = op.split('-')
-                        op1, op2 = min(float(op[0]), float(op[1])), max(float(op[0]), float(op[1]))
-                        if op1<0 and op2>0:
-                            if abs(op1)<abs(op2):
-                                op1 = abs(op1)
-                            elif abs(op1)>abs(op2):
-                                op2 = 0-op2
-                        op = (op1+op2)/2
-                    else:
-                        op = float(op)
-                    if un == 'F':
-                        op = (op-32)*5/9
-                else:
-                    if ' to ' in op:
-                        op = op.split(' to ')
-                        op1, op2 = min(float(op[0]), float(op[1])), max(float(op[0]), float(op[1]))
-                        if op1<0 and op2>0:
-                            if abs(op1)<abs(op2):
-                                op1 = abs(op1)
-                            elif abs(op1)>abs(op2):
-                                op2 = 0-op2
-                        op = (op1+op2)/2
-                    elif ' - ' in op:
-                        op = op.split(' - ')
-                        op1, op2 = min(float(op[0]), float(op[1])), max(float(op[0]), float(op[1]))
-                        if op1<0 and op2>0:
-                            if abs(op1)<abs(op2):
-                                op1 = abs(op1)
-                            elif abs(op1)>abs(op2):
-                                op2 = 0-op2
-                        op = (op1+op2)/2
-                    elif op != 'Pass':
-                        op = float(op)
-                if op != 'Pass':
-                    templist.append(op)
-            elif 'Number' in op.keys():
-                if 'C' in op['Unit']:
+        good = True
+        op = el['Value']
+        if 'Number' in op.keys():
+            if 'C' in op['Unit']:
+                templist.append(float(op['Number'][0]))
+            elif 'F' in op['Unit']:
+                templist.append((float(op['Number'][0])-32)*5/9)
+            else:
+                try:
                     templist.append(float(op['Number'][0]))
-                elif 'F' in op['Unit']:
-                    templist.append((float(op['Number'][0])-32)*5/9)
-                else:
-                    try:
-                        templist.append(float(op['Number'][0]))
-                    except:
-                        pass
-    if templist != []:
-        templist = str(sum(templist)/len(templist))
-        if decomp:
-            templist += ' and decomposes'
-        return templist
+                except:
+                    pass         
+        elif 'StringWithMarkup' in op.keys():
+            op = op['StringWithMarkup'][0]['String']
+            if 'ecomposes' in op:
+                decomp = True
+            if dgr in op:
+                op, un = op.split(dgr)
+                if un[0] == 'F':
+                    good = False
+            val = False
+            for sym in op:
+                if sym in num:
+                    if val:
+                        templist[-1]+=sym
+                    else:
+                        templist.append(sym)
+                        val = True
+                elif val:
+                    if '-' in templist[-1]:
+                        if (templist[-1].split('-')[0]).strip(' ') != '':
+                            f,s = templist[-1].split('-')
+                            if f == '':
+                                templist[-1] = '-' + s.strip(' ')
+                            else:
+                                templist[-1] = float(f)
+                                templist.append(s)
+                    templist[-1] = float(templist[-1])
+                    if not good:
+                        templist[-1] = (templist[-1]-32)*5/9
+                    val = False
+            if val:
+                if '-' in templist[-1]:
+                        if (templist[-1].split('-')[0]).strip(' ') != '':
+                            f,s = templist[-1].split('-')
+                            if f == '':
+                                templist[-1] = '-' + s.strip(' ')
+                            else:
+                                templist[-1] = float(f)
+                                templist.append(s)
+                templist[-1] = float(templist[-1])
+                if not good:
+                    templist[-1] = (templist[-1]-32)*5/9
+                val = False
+    if templist == []:
+        temp = 'NaN'
     else:
-        return 'MissingInfo'
+        print(templist)
+        temp = str(sum(templist)/len(templist))
+        if decomp:
+            temp+=' and decomposes'
+    return temp

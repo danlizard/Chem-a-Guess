@@ -1,13 +1,13 @@
 def local_retr(cid):
     op = get_second_layer_props(cid, ['Canonical SMILES', 'IUPAC Name', 'Melting Point', 'Boiling Point'])
-    smiles = parse_SMILES(op['Canonical SMILES'])
-    name = parse_IUPAC(op['IUPAC Name'])
+    smiles = parse_SMILES(op['Canonical SMILES'][0])
+    name = parse_IUPAC(op['IUPAC Name'][0])
     if 'Boiling Point' in op.keys():
-        boiltemp = str(parse_temperature(op['Boiling Point']))
+        boiltemp = str(parse_temp(op['Boiling Point']))
     else:
         boiltemp = 'NaN'
     if 'Melting Point' in op.keys():
-        melttemp = str(parse_temperature(op['Melting Point']))
+        melttemp = str(parse_temp(op['Melting Point']))
     else:
         melttemp = 'NaN'
     if (boiltemp in ['MissingInfo', 'NaN']) and (melttemp in ['MissingInfo', 'NaN']):
