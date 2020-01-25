@@ -1,3 +1,9 @@
+def parse_SMILES(arg):
+    return arg[0]['Value']['StringWithMarkup'][0]['String']
+
+def parse_IUPAC(arg):
+    return arg[0]['Value']['StringWithMarkup'][0]['String']
+
 def parse_temperature(arg):
     decomp = False
     dgr = chr(176)

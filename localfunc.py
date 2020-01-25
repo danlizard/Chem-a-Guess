@@ -1,17 +1,19 @@
 def local_retr(cid):
-    op = get_first_layer_props(cid, ['CanonicalSMILES', 'IUPACName'])
-    smiles = op['CanonicalSMILES']
-    name = op['IUPACName']
-    qual = get_second_layer_props(cid, ['Melting Point', 'Boiling Point'])
-    if 'Boiling Point' in qual.keys():
-        boiltemp = str(parse_temperature(qual['Boiling Point']))
+    op = get_second_layer_props(cid, ['Canonical SMILES', 'IUPAC Name', 'Melting Point', 'Boiling Point'])
+    smiles = parse_SMILES(op['Canonical SMILES'])
+    name = parse_IUPAC(op['IUPAC Name'])
+    if 'Boiling Point' in op.keys():
+        boiltemp = str(parse_temperature(op['Boiling Point']))
     else:
         boiltemp = 'NaN'
-    if 'Melting Point' in qual.keys():
-        melttemp = str(parse_temperature(qual['Melting Point']))
+    if 'Melting Point' in op.keys():
+        melttemp = str(parse_temperature(op['Melting Point']))
     else:
         melttemp = 'NaN'
-    return [name, smiles, melttemp, boiltemp]
+    if (boiltemp in ['MissingInfo', 'NaN']) and (melttemp in ['MissingInfo', 'NaN']):
+        return 'MissingInfo'
+    else:
+        return [name, smiles, melttemp, boiltemp]
 """
 def opt_local_retr(cid, addit=None, opt='Melting Point, Boiling Point'):
     name = (pcp.Compound.from_cid(cid)).iupac_name
@@ -113,12 +115,12 @@ def local_Core(cidop, cidend, specs=None):
         current.close()
     if prntr:
         print('Encountered lack of info', minor, 'times')
-        print('Packed', str(stat-minor), 'compounds')
+        print('Packed', str(stat-minor-major), 'compounds')
         print('Encountered major problems', major, 'times')
         print('per', stat, 'runs')
     if keeplog:
         print('Encountered lack of info '+str(minor)+' times', file=logger)
-        print('Packed '+str(stat-minor)+' compounds', file=logger)
+        print('Packed '+str(stat-minor-major)+' compounds', file=logger)
         print('Encountered major problems '+str(major)+' times', file=logger)
         print('per '+str(stat)+' runs', file=logger)
         logger.close()
