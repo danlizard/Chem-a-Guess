@@ -1,0 +1,738 @@
+Name	SMILES	Melting Point	Boiling Point
+	Length	Cycle_Count	Amide	Acyl_Halide-F	Acyl_Halide-Cl	Acyl_Halide-Br	Acyl_Halide-I	Ester	Acid-C	Ketone	Base-C	Aldehyde	Ether	Nitrile	Imine	Nitro	Amine-T	Amine-S	Amine-P	Allene	Alkine	Alkene	Org-Chloride	Org-Fluoride	Org-Bromide	Org-Iodide	Unidentified Acid	Unidentified Oxyl	Unidentified Base
+1-aminopropan-2-ol	CC(CN)O	6.103555555555555	180.51809523809524
+	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1
+1-chloro-2,4-dinitrobenzene	C1=CC(=C(C=C1[N+](=O)[O-])[N+](=O)[O-])Cl	53.25	315.0
+	4	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	1	1
+1,2-dichloroethane	C(CCl)Cl	-35.4986111111111	83.43809523809523
+	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+1,2,4-trichlorobenzene	C1=CC(=C(C=C1Cl)Cl)Cl	17.09777777777778	213.24074074074073
+	4	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0
+2,3-dihydroxybenzoic acid	C1=CC(=C(C(=C1)O)O)C(=O)O	204.0	NaN
+	5	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	2
+2-chloroacetaldehyde	C(C=O)Cl	-12.08095238095238	87.44444444444444
+	2	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2-chloroethanol	C(CCl)O	-67.50925925925925	128.49166666666667
+	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1
+2-hydroxypropanedioic acid	C(C(=O)O)(C(=O)O)O	157.0	NaN
+	2	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+3-methyl-2-oxobutanoic acid	CC(C)C(=O)C(=O)O	31.5	170.5
+	5	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2-oxopentanedioic acid	C(CC(=O)O)C(=O)C(=O)O	115.5	NaN
+	4	0	0	0	0	0	0	0	2	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2-oxobutanoic acid	CCC(=O)C(=O)O	33.0	NaN
+	5	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2,5-dichlorophenol	C1=CC(=C(C=C1Cl)O)Cl	58.31481481481482	188.66222222222223
+	4	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	1
+4-methyl-2-oxopentanoic acid	CC(C)CC(=O)C(=O)O	9.0	NaN
+	6	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2-oxohexanedioic acid	C(CC(=O)C(=O)O)CC(=O)O	127.0	NaN
+	4	0	0	0	0	0	0	0	2	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+3,4-dihydroxybenzoic acid	C1=CC(=C(C=C1C(=O)O)O)O	221.0	NaN
+	4	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	2
+pyridine-3-carbonitrile	C1=CC(=CN=C1)C#N	51.0	206.9
+	5	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0
+2-amino-3-hydroxybenzoic acid	C1=CC(=C(C(=C1)O)N)C(=O)O	202.0	NaN
+	5	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1
+2-amino-4-(2-amino-3-hydroxyphenyl)-4-oxobutanoic acid	C1=CC(=C(C(=C1)O)N)C(=O)CC(C(=O)O)N	217.0	NaN
+	7	1	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1
+3-oxohexanedioic acid	C(CC(=O)O)C(=O)CC(=O)O	125.0	NaN
+	5	0	0	0	0	0	0	0	2	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+3-oxobutanoic acid	CC(=O)CC(=O)O	36.5	NaN
+	5	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+3-hydroxybenzaldehyde	C1=CC(=CC(=C1)O)C=O	108.0	240.0
+	5	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1
+3-(hydroxymethyl)phenol	C1=CC(=CC(=C1)O)CO	73.0	NaN
+	5	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1
+2-amino-3-phosphonooxypropanoic acid	C(C(C(=O)O)N)OP(=O)(O)O	228.0	NaN
+	4	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	3
+3-phenylpropanoic acid	C1=CC=C(C=C1)CCC(=O)O	76.75	279.8
+	8	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+2-pyridin-3-ylacetic acid	C1=CC(=CN=C1)CC(=O)O	144.0	NaN
+	6	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0
+3-(carbamoylamino)propanoic acid	C(CNC(=O)N)C(=O)O	170.0	NaN
+	3	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+4-aminobutanoic acid	C(CC(=O)O)CN	203.0	NaN
+	3	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+4-(hydroxymethyl)phenol	C1=CC(=CC=C1CO)O	124.5	252.0
+	4	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	1
+4-hydroxybenzaldehyde	C1=CC(=CC=C1C=O)O	117.0	310.0
+	4	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	1
+2-(4-hydroxyphenyl)acetic acid	C1=CC(=CC=C1CC(=O)O)O	150.0	NaN
+	4	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	1
+4-hydroxybenzoic acid	C1=CC(=CC=C1C(=O)O)O	214.5	NaN
+	4	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	1
+5-amino-4-oxopentanoic acid	C(CC(=O)O)C(=O)CN	157.0	NaN
+	4	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+5-aminopentanoic acid	C(CCN)CC(=O)O	157.5	NaN
+	4	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+17-(7-hydroxy-6-methylheptan-2-yl)-10,13-dimethyl-2,3,4,5,6,7,8,9,11,12,14,15,16,17-tetradecahydro-1H-cyclopenta[a]phenanthrene-3,7,12-triol	CC(CCCC(C)C1CCC2C1(C(CC3C2C(CC4C3(CCC(C4)O)C)O)O)C)CO	232.0	NaN
+	4	4	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3
+2-amino-3-(5-hydroxy-1H-indol-3-yl)propanoic acid	C1=CC2=C(C=C1O)C(=CN2)CC(C(=O)O)N	299.0 and decomposes	NaN
+	8	2	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0	1	0	0	2	0	0	0	0	0	0	0
+acetic acid	CC(=O)O	16.634930555555556	117.86190476190475
+	3	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+acetaldehyde	CC=O	-123.22380952380954	20.553703703703704
+	3	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+acetamide	CC(=O)N	81.71444444444444	221.7037037037037
+	3	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+3-hydroxybutan-2-one	CC(C(=O)C)O	15.0	146.33333333333334
+	3	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+propan-2-one	CC(=O)C	-94.94047619047618	56.027222222222214
+	3	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2-acetamidopentanedioic acid	CC(=O)NC(CCC(=O)O)C(=O)O	200.0	NaN
+	6	0	1	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2-acetyloxyethyl(trimethyl)azanium	CC(=O)OCC[N+](C)(C)C	148.0	NaN
+	7	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+7H-purin-6-amine	C1=NC2=NC=NC(=C2N1)N	360.0	NaN
+	8	2	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+2-(6-aminopurin-9-yl)-5-(hydroxymethyl)oxolane-3,4-diol	C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)CO)O)O)N	257.25	NaN
+	4	3	0	0	0	0	0	0	0	0	2	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	2
+2-(4-aminobutyl)guanidine	C(CCN=C(N)N)CN	236.0	NaN
+	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0
+2,2-bis(carbamoylamino)acetic acid	C(C(=O)O)(NC(=O)N)NC(=O)N	180.5	NaN
+	4	0	2	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+(2,5-dioxoimidazolidin-4-yl)urea	C1(C(=O)NC(=O)N1)NC(=O)N	238.66666666666666	NaN
+	4	1	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+azane	N	-77.77037037037037	-33.27333333333333
+	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2-aminobenzoic acid	C1=CC=C(C(=C1)C(=O)O)N	145.6875	1992.0
+	5	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0
+arsoric acid	O[As](=O)(O)O	2.5	120.0
+	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	3
+4-N-(6-chloro-2-methoxyacridin-9-yl)-1-N,1-N-diethylpentane-1,4-diamine	CCN(CC)CCCC(C)NC1=C2C=C(C=CC2=NC3=C1C=CC(=C3)Cl)OC	248.8 and decomposes	NaN
+	14	3	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	5	0	0	0	0	0	0	1
+3-aminopropanoic acid	C(CN)C(=O)O	200.0	NaN
+	3	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+benzaldehyde	C1=CC=C(C=C1)C=O	-32.24622222222222	178.89722222222224
+	6	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+benzene	C1=CC=CC=C1	5.587650793650794	87.53777777777778
+	6	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+benzoate	C1=CC=C(C=C1)C(=O)[O-]	122.35	249.2
+	6	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	1
+2-(trimethylazaniumyl)acetate	C[N+](C)(C)CC(=O)[O-]	295.6666666666667 and decomposes	NaN
+	5	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+5-(2-oxo-1,3,3a,4,6,6a-hexahydrothieno[3,4-d]imidazol-4-yl)pentanoic acid	C1C2C(C(S1)CCCCC(=O)O)NC(=O)N2	232.0 and decomposes	NaN
+	6	2	1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+3-[[3-amino-5-[carbamimidoyl(methyl)amino]pentanoyl]amino]-6-(4-amino-2-oxopyrimidin-1-yl)-3,6-dihydro-2H-pyran-2-carboxylic acid	CN(CCC(CC(=O)NC1C=CC(OC1C(=O)O)N2C=CC(=NC2=O)N)N)C(=N)N	235.5	NaN
+	4	2	1	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	1	0	0	2	0	0	0	0	0	0	1
+bromide	[Br-]	-7.25	NaN
+	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+bromane	Br	-86.76000000000002	-66.72044444444444
+	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+butanal	CCCC=O	-98.54977777777778	74.85000000000001
+	5	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+butane-2,3-diol	CC(C(C)O)O	20.099999999999998	182.125
+	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2
+butan-1-ol	CCCCO	-89.54166666666666	117.47380952380952
+	5	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+butanoic acid	CCCC(=O)O	-6.798148148148148	163.68
+	5	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+calcium(2+)	[Ca+2]	850.0	NaN
+	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+pentane-1,5-diamine	C(CCN)CCN	9.943333333333333	179.0
+	4	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0
+2-amino-4-(diaminomethylideneamino)oxybutanoic acid	C(CON=C(N)N)C(C(=O)O)N	184.0	NaN
+	3	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+carbon dioxide	C(=O)=O	-70.17391666666666	1178.2112000000002
+	2	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+formic acid	C(=O)O	4.544444444444445	102.57936507936508
+	2	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+3-hydroxy-4-(trimethylazaniumyl)butanoate	C[N+](C)(C)CC(CC(=O)[O-])O	197.0	NaN
+	5	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2
+benzene-1,2-diol	C1=CC=C(C(=C1)O)O	105.0	245.3730158730159
+	5	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	2
+2-(hydroxymethyl)-6-[4,5,6-trihydroxy-2-(hydroxymethyl)oxan-3-yl]oxyoxane-3,4,5-triol	C(C1C(C(C(C(O1)OC2C(OC(C(C2O)O)O)CO)O)O)O)O	212.5	NaN
+	2	2	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	8
+methane	C	-182.5147037037037	-161.32222222222222
+	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+1,2,3,4,6,7,8,9,10,10-decachloropentacyclo[5.3.0.02,6.03,9.04,8]decan-5-one	C1(=O)C2(C3(C4(C1(C5(C2(C3(C(C45Cl)(Cl)Cl)Cl)Cl)Cl)Cl)Cl)Cl)Cl	350.0 and decomposes	662.0
+	3	6	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+2-chlorobenzene-1,4-diol	C1=CC(=C(C=C1O)Cl)O	104.0	263.0
+	4	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1
+2-hydroxyethyl(trimethyl)azanium	C[N+](C)(C)CCO	274.0	113.0
+	5	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+3-phenylprop-2-enal	C1=CC=C(C=C1)C=CC=O	-7.5	249.5
+	8	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0
+3-phenylprop-2-en-1-ol	C1=CC=C(C=C1)C=CCO	33.0	250.0
+	8	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0
+prop-1-ene-1,2,3-tricarboxylic acid	C(C(=CC(=O)O)C(=O)O)C(=O)O	194.5	NaN
+	3	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2-hydroxypropane-1,2,3-tricarboxylic acid	C(C(=O)O)C(CC(=O)O)(C(=O)O)O	152.96296296296296	1992.0 and decomposes
+	3	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+chloride	[Cl-]	-101.0	NaN
+	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+chromen-2-one	C1=CC=C2C(=C1)C=CC(=O)O2	69.82539682539682	299.43755555555555
+	9	2	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+(4-propan-2-ylphenyl)methanol	CC(C)C1=CC=C(C=C1)CO	28.0	249.0
+	8	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+4-propan-2-ylbenzaldehyde	CC(C)C1=CC=C(C=C1)C=O	NaN	235.5
+	8	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+2-hydroxy-2-(4-hydroxyphenyl)acetic acid	C1=CC(=CC=C1C(C(=O)O)O)O	104.5	NaN
+	4	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	2
+2-methylphenol	CC1=CC=CC=C1O	30.637037037037036	191.04444444444442
+	8	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0
+2-hydroxybenzoic acid	C1=CC=C(C(=C1)C(=O)O)O	158.2037037037037	211.0
+	5	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	1
+3-methylbenzene-1,2-diol	CC1=C(C(=CC=C1)O)O	68.0	241.0
+	4	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	2
+3-methylphenol	CC1=CC(=CC=C1)O	11.790277777777778	202.35925925925926
+	5	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	1
+2-(hydroxymethyl)-6-(4-hydroxyphenoxy)oxane-3,4,5-triol	C1=CC(=CC=C1O)OC2C(C(C(C(O2)CO)O)O)O	161.33333333333334	NaN
+	7	2	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	4
+octane	CCCCCCCC	-56.74873015873016	125.65703703703703
+	8	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+benzene-1,3,5-triol	C1=C(C=C(C=C1O)O)O	218.5	NaN
+	3	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	2
+(4-methyl-2-oxochromen-7-yl) acetate	CC1=CC(=O)OC2=C1C=CC(=C2)OC(=O)C	153.5	NaN
+	13	2	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	1
+3,4,5-trihydroxybenzoic acid	C1=C(C=C(C(=C1O)O)O)C(=O)O	239.04444444444442 and decomposes	1992.0
+	4	1	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	2
+octanoic acid	CCCCCCCC(=O)O	16.396296296296295	239.18055555555554
+	9	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+heptanedioic acid	C(CCC(=O)O)CCC(=O)O	105.25	342.0
+	5	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2-(1H-indol-3-yl)acetamide	C1=CC=C2C(=C1)C(=CN2)CC(=O)N	150.5	NaN
+	9	2	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	2	0	0	0	0	0	0	0
+2-nitropropane	CC(C)[N+](=O)[O-]	-91.9888888888889	120.29814814814814
+	4	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1
+1-methyl-5-pyridin-3-ylpyrrolidin-2-one	CN1C(CCC1=O)C2=CN=CC=C2	41.0	210.5
+	9	2	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1	1	0	0	1	0	0	0	0	0	0	0
+3-(1-methyl-1-oxidopyrrolidin-1-ium-2-yl)pyridine	C[N+]1(CCCC1C2=CN=CC=C2)[O-]	-79.0	NaN
+	3	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	1
+3-pyrrolidin-2-ylpyridine	C1CC(NC1)C2=CN=CC=C2	NaN	265.0
+	9	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0
+2-aminobutanedioic acid	C(C(C(=O)O)N)C(=O)O	270.5	NaN
+	3	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+propane-1,3-diamine	C(CN)CN	-12.11111111111111	137.65
+	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0
+3-hydroxybutanoic acid	CC(CC(=O)O)O	46.0	NaN
+	3	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+2-(tert-butylamino)-1-(3-chlorophenyl)propan-1-one	CC(C(=O)C1=CC(=CC=C1)Cl)NC(C)(C)C	233.5	NaN
+	5	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0
+3-chlorobenzoic acid	C1=CC(=CC(=C1)Cl)C(=O)O	157.94444444444446	1992.0
+	5	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+3,5-dihydroxy-3-methylpentanoic acid	CC(CCO)(CC(=O)O)O	25.5	NaN
+	3	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+hexane-1,2,3,4,5,6-hexol	C(C(C(C(C(CO)O)O)O)O)O	111.0	295.0
+	2	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	5
+octanal	CCCCCCCC=O	-23.0	171.0
+	9	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+(3-amino-3-carboxypropyl)-dimethylsulfanium	C[S+](C)CCC(C(=O)O)N	139.0	NaN
+	6	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2-methoxyphenol	COC1=CC=CC=C1O	29.066666666666666	231.85714285714286
+	9	1	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+2-benzamidoacetic acid	C1=CC=C(C=C1)C(=O)NCC(=O)O	189.83333333333334	NaN
+	9	1	1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+2-aminohexanedioic acid	C(CC(C(=O)O)N)CC(=O)O	197.0	NaN
+	4	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2-methylpropanedioic acid	CC(C(=O)O)C(=O)O	135.0	NaN
+	4	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+5-oxopyrrolidine-2-carboxylic acid	C1CC(=O)NC1C(=O)O	158.5	NaN
+	7	1	1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+propanal	CCC=O	-80.53703703703702	48.55555555555556
+	4	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+4-acetyloxy-2-aminobutanoic acid	CC(=O)OCCC(C(=O)O)N	200.0	NaN
+	7	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+selane	[SeH2]	-66.07407407407408	-41.074074074074076
+	2	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+1-aminocyclopropane-1-carboxylic acid	C1CC1(C(=O)O)N	230.0	NaN
+	4	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+cyanic acid	C(#N)O	-86.0	NaN
+	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+4-nitrobenzaldehyde	C1=CC(=CC=C1C=O)[N+](=O)[O-]	107.0	NaN
+	5	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	1	1
+arsorous acid	O[As](O)O	NaN	465.0
+	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3
+2-phosphonoacetic acid	C(C(=O)O)P(=O)(O)O	144.5	NaN
+	3	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	2
+2-(3,4-dihydroxyphenyl)acetic acid	C1=CC(=C(C=C1CC(=O)O)O)O	141.66666666666666	NaN
+	4	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	2
+6-aminohexanoic acid	C(CCC(=O)O)CCN	204.0	NaN
+	4	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+dibenzofuran	C1=CC=C2C(=C1)C3=CC=CC=C3O2	86.58333333333334	287.0740740740741
+	12	3	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0
+2-acetamido-3-sulfanylpropanoic acid	CC(=O)NC(CS)C(=O)O	109.5	NaN
+	6	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2-[carbamimidoyl(methyl)amino]acetic acid	CN(CC(=O)O)C(=N)N	287.0 and decomposes	NaN
+	4	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+2-amino-3-methyl-4H-imidazol-5-one	CN1CC(=O)N=C1N	303.0 and decomposes	NaN
+	7	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0
+2-amino-3-sulfanylpropanoic acid	C(C(C(=O)O)N)S	260.0 and decomposes	NaN
+	2	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+4-amino-1-[3,4-dihydroxy-5-(hydroxymethyl)oxolan-2-yl]pyrimidin-2-one	C1=CN(C(=O)N=C1N)C2C(C(C(O2)CO)O)O	212.5	NaN
+	6	2	1	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	2
+6-amino-1H-pyrimidin-2-one	C1=C(NC(=O)N=C1)N	300.0	NaN
+	3	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+2-aminopropanoic acid	CC(C(=O)O)N	297.0 and decomposes	250.0
+	3	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2,3,4,5,6-pentahydroxyhexanoic acid	C(C(C(C(C(C(=O)O)O)O)O)O)O	131.0	NaN
+	2	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	5
+2,3,4,5-tetrahydroxyhexanedioic acid	C(C(C(C(=O)O)O)O)(C(C(=O)O)O)O	125.5	NaN
+	2	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	4
+2-aminopentanedioic acid	C(CC(=O)O)C(C(=O)O)N	213.0	175.0
+	3	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2-hydroxypropanoic acid	CC(C(=O)O)O	22.866666666675	122.0
+	3	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+pyrrolidine-2-carboxylic acid	C1CC(NC1)C(=O)O	215.66666666666666 and decomposes	NaN
+	5	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2-amino-3-hydroxypropanoic acid	C(C(C(=O)O)N)O	228.0 and decomposes	NaN
+	2	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+3-methylbut-2-enyl phosphono hydrogen phosphate	CC(=CCOP(=O)(O)OP(=O)(O)O)C	236.0	NaN
+	3	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	4
+1,3-diazinane-2,4-dione	C1CNC(=O)NC1=O	280.0	NaN
+	7	1	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+butane-2,3-dione	CC(=O)C(=O)C	-1.9962962962962967	87.8111111111111
+	4	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+3,4-dihydrochromen-2-one	C1CC(=O)OC2=CC=CC=C21	25.0	272.0740740740741
+	10	3	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0
+1,3-dihydroxypropan-2-one	C(C(=O)CO)O	90.0	NaN
+	2	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+2-(dimethylamino)acetic acid	CN(C)CC(=O)O	185.5	63.9
+	5	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+N-methylmethanamine	CNC	-85.47777777777776	13.260317460317461
+	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0
+5,6-dimethyl-1H-benzimidazole	CC1=CC2=C(C=C1C)N=CN2	205.5	NaN
+	8	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	3	0	0	0	0	0	0	0
+4-(2-aminoethyl)benzene-1,2-diol	C1=CC(=C(C=C1CCN)O)O	128.0	227.0
+	4	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	2	0	0	0	0	0	0	2
+3-hydroxy-13-methyl-7,8,9,11,12,14,15,16-octahydro-6H-cyclopenta[a]phenanthren-17-one	CC12CCC3C(C1CCC2=O)CCC4=C3C=CC(=C4)O	260.2	NaN
+	14	4	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	1
+2-aminoethanol	C(CO)N	10.411111111111111	170.6301587301587
+	2	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+ethyl 2-methyl-3-oxobutanoate	CCOC(=O)C(C)C(=O)C	NaN	187.0
+	7	0	0	0	0	0	0	0	0	2	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+ethanol	CCO	-114.04111111111112	78.25809523809524
+	3	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+formamide	C(=O)N	2.600793650793651	212.32222222222222 and decomposes
+	2	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+but-2-enedioic acid	C(=CC(=O)O)C(=O)O	287.0 and decomposes	200.0
+	3	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2,5-diamino-5-oxopentanoic acid	C(CC(=O)N)C(C(=O)O)N	184.5 and decomposes	NaN
+	3	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+pentanedioic acid	C(CC(=O)O)CC(=O)O	97.43333333333334	282.4222222222222 and decomposes
+	4	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2-aminoacetic acid	C(C(=O)O)N	261.74444444444447 and decomposes	NaN
+	2	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2,3-dihydroxypropanal	C(C(C=O)O)O	145.0	NaN
+	2	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2
+propane-1,2,3-triol	C(C(CO)O)O	18.23333333333333	290.0 and decomposes
+	2	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2
+2,3-dihydroxypropyl dihydrogen phosphate	C(C(COP(=O)(O)O)O)O	-25.0	NaN
+	2	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	4
+2-[4-(3,7,12-trihydroxy-10,13-dimethyl-2,3,4,5,6,7,8,9,11,12,14,15,16,17-tetradecahydro-1H-cyclopenta[a]phenanthren-17-yl)pentanoylamino]acetic acid	CC(CCC(=O)NCC(=O)O)C1CCC2C1(C(CC3C2C(CC4C3(CCC(C4)O)C)O)O)C	235.0	NaN
+	8	4	1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3
+2-hydroxyacetaldehyde	C(C=O)O	97.0	NaN
+	2	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+oxaldehydic acid	C(=O)C(=O)O	34.333333333333336	NaN
+	3	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+carbonic acid	C(=O)(O)O	788.0	2.0 and decomposes
+	2	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2
+formonitrile	C#N	-13.578055555555554	25.632916666666667
+	2	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2-(1H-imidazol-5-yl)ethanamine	C1=C(NC=N1)CCN	95.6	209.5
+	5	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	1	0	0	0	0	0	0	0
+(4-amino-2-methylpyrimidin-5-yl)methanol	CC1=NC=C(C(=N1)N)CO	198.0	NaN
+	7	1	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+2-amino-4-sulfanylbutanoic acid	C(CS)C(C(=O)O)N	232.5	NaN
+	3	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2-(2,5-dihydroxyphenyl)acetic acid	C1=CC(=C(C=C1O)CC(=O)O)O	153.0	NaN
+	4	1	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1
+thiocyanic acid	C(#N)S	5.0	NaN
+	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+molecular hydrogen	[HH]	-257.4627222222222	-254.97925925925927
+	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+benzene-1,4-diol	C1=CC(=CC=C1O)O	170.88282828282829	286.02222222222224
+	4	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1
+3,7-dihydropurin-6-one	C1=NC2=C(N1)C(=O)N=CN2	150.0	NaN
+	8	2	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	1	0	0	0	0	0	0	0
+2-amino-3-methylpentanoic acid	CCC(C)C(C(=O)O)N	279.5 and decomposes	169.0
+	5	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+1H-imidazole	C1=CN=CN1	90.00399999999999	259.75
+	5	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0
+2-(1H-indol-3-yl)acetic acid	C1=CC=C2C(=C1)C(=CN2)CC(=O)O	168.5	NaN
+	9	2	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	2	0	0	0	0	0	0	0
+molecular iodine	II	113.55000000000001	184.68
+	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+potassium(1+)	[K+]	63.2	NaN
+	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+4-hydroxypyrrolidine-2-carboxylic acid	C1C(CNC1C(=O)O)O	274.5	NaN
+	3	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	1
+2-amino-3-(3,4-dihydroxyphenyl)propanoic acid	C1=CC(=C(C=C1CC(C(=O)O)N)O)O	280.0	NaN
+	4	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	2
+4-[1-hydroxy-2-(methylamino)ethyl]benzene-1,2-diol	CNCC(C1=CC(=C(C=C1)O)O)O	211.66666666666669	NaN
+	5	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	2	0	0	0	0	0	0	3
+2-amino-4-methylsulfinylbutanoic acid	CS(=O)CCC(C(=O)O)N	233.0	NaN
+	6	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+piperidine-2-carboxylic acid	C1CCNC(C1)C(=O)O	264.0	NaN
+	7	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0
+2-amino-3-[4-(4-hydroxy-3,5-diiodophenoxy)-3,5-diiodophenyl]propanoic acid	C1=C(C=C(C(=C1I)OC2=CC(=C(C(=C2)I)O)I)I)CC(C(=O)O)N	235.5 and decomposes	NaN
+	5	2	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	2
+2,3,4,5-tetrahydroxypentanal	C(C(C(C(C=O)O)O)O)O	153.5	NaN
+	2	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	4
+octadeca-9,12,15-trienoic acid	CCC=CCC=CCC=CCCCCCCCC(=O)O	29.75	NaN
+	19	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+5-(dithiolan-3-yl)pentanamide	C1CSSC1CCCCC(=O)N	127.66666666666667	NaN
+	11	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+5-(dithiolan-3-yl)pentanoic acid	C1CSSC1CCCCC(=O)O	52.0	NaN
+	11	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+propanedioic acid	C(C(=O)O)C(=O)O	135.5222222222222	140.0 and decomposes
+	3	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+3-(2-hydroxyphenyl)propanoic acid	C1=CC=C(C(=C1)CCC(=O)O)O	82.5	NaN
+	5	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	1
+2,3-dihydroxybutanedioic acid	C(C(C(=O)O)O)(C(=O)O)O	189.8125	NaN
+	2	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2
+2-amino-4-methylsulfanylbutanoic acid	CSCCC(C(=O)O)N	281.0 and decomposes	181.0 and decomposes
+	6	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+methanethiol	CS	-122.73015873015872	5.975000000000001
+	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2-oxopropanal	CC(=O)C=O	25.0	72.07407407407408
+	4	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+methanol	CO	-97.76190476190474	64.46481481481482
+	2	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+magnesium(2+)	[Mg+2]	651.0	1100.0
+	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+(2,3,4,5,6-pentaphosphonooxycyclohexyl) dihydrogen phosphate	C1(C(C(C(C(C1OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O	25.0	NaN
+	4	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	6	17
+cyclohexane-1,2,3,4,5,6-hexol	C1(C(C(C(C(C1O)O)O)O)O)O	233.0	291.33
+	2	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	5
+N-[2-(5-methoxy-1H-indol-3-yl)ethyl]acetamide	CC(=O)NCCC1=CNC2=C1C=C(C=C2)OC	117.0	NaN
+	14	2	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	2	0	0	0	0	0	0	1
+N-phenylacetamide	CC(=O)NC1=CC=CC=C1	114.2925925925926	303.962962962963
+	9	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+2-(methylamino)-1-phenylethanol	CNCC(C1=CC=CC=C1)O	75.0	NaN
+	5	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	3	0	0	0	0	0	0	1
+sodium(1+)	[Na+]	97.82	NaN
+	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+naphthalene	C1=CC=C2C=CC=CC2=C1	80.13174603174603	217.85555555555558
+	10	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	5	0	0	0	0	0	0	0
+nickel(2+)	[Ni+2]	1455.0	NaN
+	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+nickel	[Ni]	1505.0	2783.6111111111113
+	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+pyridine-3-carboxamide	C1=CC(=CN=C1)C(=O)N	129.6	155.66666666666666
+	5	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0
+pyridine-3-carboxylic acid	C1=CC(=CN=C1)C(=O)O	236.58518518518517	1992.0
+	5	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0
+3-(1-methylpyrrolidin-2-yl)pyridine	CN1CCCC1C2=CN=CC=C2	-79.5	247.0
+	12	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	0	0	1	0	0	0	0	0	0	0
+nitric acid	[N+](=O)(O)[O-]	-41.973333333333336	90.46666666666667
+	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	2
+molecular nitrogen	N#N	-211.48481481481483	-195.80244444444446
+	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+nitrous oxide	[N-]=[N+]=O	-72.56375	-88.56285714285715
+	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+N,N-dimethylaniline	CN(C)C1=CC=CC=C1	2.355555555555555	199.42037037037036
+	8	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	3	0	0	0	0	0	0	0
+octan-1-ol	CCCCCCCCO	-19.133333333333336	192.04999999999998
+	9	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2,4-dioxo-1H-pyrimidine-6-carboxylic acid	C1=C(NC(=O)NC1=O)C(=O)O	345.51587301587307	NaN
+	4	1	1	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+2-oxobutanedioic acid	C(C(=O)C(=O)O)C(=O)O	161.0	NaN
+	3	0	0	0	0	0	0	0	2	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+oxalic acid	C(=O)(C(=O)O)O	176.7777777777778 and decomposes	2016.0
+	2	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+oxamic acid	C(=O)(C(=O)O)N	210.0	NaN
+	2	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+4-aminobenzoic acid	C1=CC(=CC=C1C(=O)O)N	188.44444444444443	NaN
+	4	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0
+3-(4-hydroxyphenyl)-2-oxopropanoic acid	C1=CC(=CC=C1CC(=O)C(=O)O)O	219.5	NaN
+	4	1	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	1
+4-nitrophenol	C1=CC(=CC=C1[N+](=O)[O-])O	124.83434343434342	278.9555555555556 and decomposes
+	4	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	1
+hexadecanal	CCCCCCCCCCCCCCCC=O	35.0	NaN
+	17	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+hexadecanoic acid	CCCCCCCCCCCCCCCC(=O)O	62.178	351.5
+	17	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2,3,4,5,6-pentachlorophenol	C1(=C(C(=C(C(=C1Cl)Cl)Cl)Cl)Cl)O	183.44444444444443	309.30952380952385 and decomposes
+	2	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1
+2-amino-3-phenylpropanoic acid	C1=CC=C(C=C1)CC(C(=O)O)N	283.0 and decomposes	NaN
+	7	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+phenanthrene	C1=CC=C2C(=C1)C=CC3=CC=CC=C32	99.55	339.0444444444445
+	13	4	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	6	0	0	0	0	0	0	0
+phenol	C1=CC=C(C=C1)O	41.849888888888884	181.81049382716049
+	5	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	1
+2-oxo-3-phenylpropanoic acid	C1=CC=C(C=C1)CC(=O)C(=O)O	154.0	NaN
+	8	1	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+2-phenylacetaldehyde	C1=CC=C(C=C1)CC=O	77.25	195.0
+	7	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+2-phenylacetic acid	C1=CC=C(C=C1)CC(=O)O	76.6	389.125
+	7	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+2-amino-1-phenylethanol	C1=CC=C(C=C1)C(CN)O	56.5	NaN
+	6	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	3	0	0	0	0	0	0	1
+2-phenylethanamine	C1=CC=C(C=C1)CCN	-40.0	197.5
+	7	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	3	0	0	0	0	0	0	0
+phosphoric acid	OP(=O)(O)O	41.59920634920635	302.5111111111111
+	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	3
+2-aminoethyl dihydrogen phosphate	C(COP(=O)(O)O)N	242.0	NaN
+	2	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	2
+phthalic acid	C1=CC=C(C(=C1)C(=O)O)C(=O)O	242.15277777777777 and decomposes	1992.0 and decomposes
+	6	1	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0
+pyridine-2-carboxylic acid	C1=CC=NC(=C1)C(=O)O	136.5	NaN
+	7	1	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+phosphono dihydrogen phosphate	OP(=O)(O)OP(=O)(O)O	61.0	NaN
+	5	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	5
+propane-1,2-diol	CC(CO)O	-59.857142857142854	187.9074074074074
+	3	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+propan-1-ol	CCCO	-126.48194444444444	97.18095238095238
+	4	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+propanoic acid	CCC(=O)O	-20.325000000000003	141.03492063492064
+	4	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+pteridine	C1=CN=C2C(=N1)C=NC=N2	139.5	NaN
+	9	2	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+7H-purine	C1=C2C(=NC=N1)N=CN2	215.25	NaN
+	6	2	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	1	0	0	0	0	0	0	0
+butane-1,4-diamine	C(CCN)CN	27.5	158.5
+	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0
+pyrazine-2-carboxamide	C1=CN=C(C=N1)C(=O)N	191.9814814814815	1992.0
+	6	1	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+1H-pyrazole	C1=CNN=C1	68.0	187.0
+	5	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+pyridine	C1=CC=NC=C1	-41.98095238095238	115.25873015873016
+	6	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	2	0	0	0	0	0	0	0
+3-hydroxy-5-(hydroxymethyl)-2-methylpyridine-4-carbaldehyde	CC1=NC=C(C(=C1O)C=O)CO	165.0	NaN
+	7	1	0	0	0	0	0	0	0	0	2	1	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+(4-formyl-5-hydroxy-6-methylpyridin-3-yl)methyl dihydrogen phosphate	CC1=NC=C(C(=C1O)C=O)COP(=O)(O)O	255.0	NaN
+	9	1	0	0	0	0	0	0	0	0	2	1	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	1	2
+4,5-bis(hydroxymethyl)-2-methylpyridin-3-ol	CC1=NC=C(C(=C1O)CO)CO	168.25	NaN
+	7	1	0	0	0	0	0	0	0	0	3	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+2-oxopropanoic acid	CC(=O)C(=O)O	13.800000000000002	54.0
+	4	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+(5-ethenyl-1-azabicyclo[2.2.2]octan-2-yl)-(6-methoxyquinolin-4-yl)methanol	COC1=CC2=C(C=CN=C2C=C1)C(C3CC4CCN3CC4C=C)O	170.66666666666666	NaN
+	8	4	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	1	1	0	0	3	0	0	0	0	0	0	1
+pyridine-2,3-dicarboxylic acid	C1=CC(=C(N=C1)C(=O)O)C(=O)O	218.875	NaN
+	5	1	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+methylsulfanylmethane	CSC	-98.06592592592592	37.26888888888889
+	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+7,8-dimethyl-10-(2,3,4,5-tetrahydroxypentyl)benzo[g]pteridine-2,4-dione	CC1=CC2=C(C=C1C)N(C3=NC(=O)NC(=O)C3=N2)CC(C(C(CO)O)O)O	280.0 and decomposes	NaN
+	9	3	1	0	0	0	0	0	0	1	1	0	0	0	2	0	0	0	0	0	0	3	0	0	0	0	0	0	3
+2-amino-3-(carboxymethylsulfanyl)propanoic acid	C(C(C(=O)O)N)SCC(=O)O	205.5	NaN
+	5	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2-hydroxy-2-methylbutanedioic acid	CC(CC(=O)O)(C(=O)O)O	109.0	NaN
+	3	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+sulfurothioic S-acid	OS(=O)(=O)S	48.0	NaN
+	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	1
+3,4,5-trihydroxycyclohexene-1-carboxylic acid	C1C(C(C(C=C1C(=O)O)O)O)O	183.75	NaN
+	3	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	3
+1,3,4,5,6-pentahydroxyhexan-2-one	C(C(C(C(C(=O)CO)O)O)O)O	165.0	NaN
+	2	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	4
+N'-(3-aminopropyl)butane-1,4-diamine	C(CCNCCCN)CN	25.0	129.0
+	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	2	0	0	0	0	0	0	0	0	0	0
+N,N'-bis(3-aminopropyl)butane-1,4-diamine	C(CCNCCCN)CNCCCN	29.0	150.0
+	7	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	2	0	0	0	0	0	0	0	0	0	0
+butanedioic acid	C(CC(=O)O)C(=O)O	152.8080808080808	235.0 and decomposes
+	3	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+sulfuric acid	OS(=O)(=O)O	10.38962962962963	261.4
+	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	1
+sulfur dioxide	O=S=O	-75.05222222222223	-10.01
+	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1
+2-aminoethanesulfonic acid	C(CS(=O)(=O)O)N	310.6 and decomposes	325.0 and decomposes
+	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	0
+thiolane	C1CCSC1	-96.15333333333332	120.53
+	5	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+thiolane 1-oxide	C1CCS(=O)C1	NaN	236.0
+	5	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+2-[3-[(4-amino-2-methylpyrimidin-5-yl)methyl]-4-methyl-1,3-thiazol-3-ium-5-yl]ethanol	CC1=C(SC=[N+]1CC2=CN=C(N=C2N)C)CCO	220.0	NaN
+	6	2	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	2	0	0	1	0	0	0	0	0	0	0
+2-sulfanylacetic acid	C(C(=O)O)S	-16.52777777777778	120.0
+	2	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+5-methyl-1H-pyrimidine-2,4-dione	CC1=CNC(=O)NC1=O	317.3333333333333	NaN
+	8	1	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+2-(4-methyl-1,3-thiazol-5-yl)ethanol	CC1=C(SC=N1)CCO	25.0	NaN
+	6	1	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+toluene	CC1=CC=CC=C1	-94.9625	110.8047619047619
+	7	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+2-(hydroxymethyl)-6-[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxyoxane-3,4,5-triol	C(C1C(C(C(C(O1)OC2C(C(C(C(O2)CO)O)O)O)O)O)O)O	149.0	NaN
+	2	2	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	8
+N,N-dimethylmethanamine oxide	C[N+](C)(C)[O-]	97.0	NaN
+	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+N,N-dimethylmethanamine	CN(C)C	-100.81936507936507	6.756507936507938
+	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+2-(1H-indol-3-yl)ethanamine	C1=CC=C2C(=C1)C(=CN2)CCN	117.0	NaN
+	9	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	2	0	0	0	0	0	0	0
+1H-pyrimidine-2,4-dione	C1=CNC(=O)NC1=O	335.3333333333333	NaN
+	7	1	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+7,9-dihydro-3H-purine-2,6,8-trione	C12=C(NC(=O)N1)NC(=O)NC2=O	300.0	NaN
+	7	2	2	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+2-amino-3-methylbutanoic acid	CC(C)C(C(=O)O)N	315.0	NaN
+	4	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+4-hydroxy-3-methoxybenzaldehyde	COC1=C(C=CC(=C1)C=O)O	81.86111111111111	285.0
+	5	1	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1
+3,7-dihydropurine-2,6-dione	C1=NC2=C(N1)C(=O)NC(=O)N2	300.0	NaN
+	8	2	2	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+1-hydroxypropane-1,2,3-tricarboxylic acid	C(C(C(C(=O)O)O)C(=O)O)C(=O)O	163.5	NaN
+	3	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+N-methyl-1-phenylpropan-2-amine	CC(CC1=CC=CC=C1)NC	86.0	212.0
+	4	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+1-methyl-16-azatetracyclo[7.6.1.02,7.010,15]hexadeca-2,4,6,10,12,14-hexaene	CC12C3=CC=CC=C3CC(N1)C4=CC=CC=C24	68.75	NaN
+	16	5	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	6	0	0	0	0	0	0	0
+4,8a-dimethyl-1,2,3,4,5,6,7,8-octahydronaphthalen-4a-ol	CC1CCCC2(C1(CCCC2)O)C	NaN	270.0
+	7	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+4-(2-amino-1-hydroxyethyl)-2-methoxyphenol	COC1=C(C=CC(=C1)C(CN)O)O	204.0	NaN
+	5	1	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	2
+5-methyl-2-propan-2-ylcyclohexan-1-ol	CC1CCC(C(C1)O)C(C)C	22.925925925925924	214.23703703703703
+	7	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+4-prop-1-en-2-ylcyclohexene-1-carboxylic acid	CC(=C)C1CCC(=CC1)C(=O)O	60.0	NaN
+	8	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2-hydroxy-2-phenylacetic acid	C1=CC=C(C=C1)C(C(=O)O)O	123.5	NaN
+	6	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	1
+decane-1,10-diamine	C(CCCCCN)CCCCN	62.5	NaN
+	6	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0
+1,10-phenanthroline	C1=CC2=C(C3=C(C=CC=N3)C=C2)N=C1	117.0	300.0
+	6	3	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	5	0	0	0	0	0	0	0
+1,2-dimethylhydrazine	CNNC	-9.0	81.0
+	4	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+1-(2-methoxyphenyl)piperazine	COC1=CC=CC=C1N2CCNCC2	38.5	NaN
+	14	2	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	2	0	0	0	1	0	0	0	0	0	0	0
+2-(hydroxymethyl)piperidine-3,4,5-triol	C1C(C(C(C(N1)CO)O)O)O	206.0	NaN
+	3	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3
+1-methyl-4-phenyl-3,6-dihydro-2H-pyridine	CN1CCC(=CC1)C2=CC=CC=C2	40.666666666666664	87.5
+	11	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	3	0	0	0	0	0	0	0
+1-methylimidazole	CN1C=CN=C1	-6.0	195.5
+	6	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0
+2-pyridin-2-ylpyridine	C1=CC=NC(=C1)C2=CC=CC=N2	71.33333333333333	273.0
+	11	2	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+2-(2,4,5-trichlorophenoxy)acetic acid	C1=C(C(=CC(=C1Cl)Cl)Cl)OCC(=O)O	155.04761904761907	1992.0 and decomposes
+	6	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	1
+2-(2,4-dichlorophenoxy)acetic acid	C1=CC(=C(C=C1Cl)Cl)OCC(=O)O	138.90476190476193	1992.0 and decomposes
+	7	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	1
+methyl 2-(2,4-dichlorophenoxy)acetate	COC(=O)COC1=C(C=C(C=C1)Cl)Cl	119.0	NaN
+	8	1	0	0	0	0	0	0	0	1	1	0	1	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0
+4-(2,4-dichlorophenoxy)butanoic acid	C1=CC(=C(C=C1Cl)Cl)OCCCC(=O)O	118.66666666666667	324.35
+	9	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	1
+2,4-dihydroxybenzoic acid	C1=CC(=C(C=C1O)O)C(=O)O	221.0	NaN
+	5	1	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1
+2,4-dinitrophenol	C1=CC(=C(C=C1[N+](=O)[O-])[N+](=O)[O-])O	113.98518518518517	1992.0
+	4	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	1	2
+1-methyl-6-phenylimidazo[4,5-b]pyridin-2-amine	CN1C2=C(N=CC(=C2)C3=CC=CC=C3)N=C1N	327.3333333333333	NaN
+	7	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	0	0	3	0	0	0	0	0	0	0
+2-amino-2-methylpropane-1,3-diol	CC(CO)(CO)N	110.0	NaN
+	3	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+4-methylpyridin-2-amine	CC1=CC(=NC=C1)N	100.0	NaN
+	5	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0
+9H-fluoren-2-amine	C1C2=CC=CC=C2C3=C1C=C(C=C3)N	128.84444444444443	NaN
+	12	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	6	0	0	0	0	0	0	0
+2-sulfanylethanol	C(CS)O	-37.5	157.57142857142858 and decomposes
+	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+1-hydroxypyridine-2-thione	C1=CC(=S)N(C=C1)O	70.5	NaN
+	5	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	1
+2-diphenylboranyloxyethanamine	B(C1=CC=CC=C1)(C2=CC=CC=C2)OCCN	193.0	NaN
+	5	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	6	0	0	0	0	0	0	1
+N',N'-dibutylpropane-1,3-diamine	CCCCN(CCCC)CCCN	NaN	205.0
+	9	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0
+1H-1,2,4-triazol-5-amine	C1=NNC(=N1)N	158.94444444444446	NaN
+	5	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+3-aminobenzamide	C1=CC(=CC(=C1)N)C(=O)N	115.5	NaN
+	5	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+3-aminopropanenitrile	C(CN)C#N	25.0	185.0
+	3	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+3-hydroxy-3-methylpentanedioic acid	CC(CC(=O)O)(CC(=O)O)O	105.0	NaN
+	3	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+3-methoxypropan-1-amine	COCCCN	NaN	117.5
+	6	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+3-methyl-1,2-dihydrobenzo[j]aceanthrylene	CC1=C2CCC3=C2C(=CC4=C3C=CC5=CC=CC=C54)C=C1	179.22222222222223	280.0
+	10	6	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	8	0	0	0	0	0	0	0
+3-propyl-7H-purine-2,6-dione	CCCN1C2=C(C(=O)NC1=O)NC=N2	288.0	NaN
+	9	2	1	0	0	0	0	0	0	0	0	1	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	0	0
+3-nitropropanoic acid	C(C[N+](=O)[O-])C(=O)O	65.25396825396825	NaN
+	3	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0
+4-aminobenzenecarboximidamide	C1=CC(=CC=C1C(=N)N)N	182.0	NaN
+	4	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0
+pyridin-4-amine	C1=CN=CC=C1N	185.39814814814815	273.2
+	7	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0
+4-chlorobenzene-1,3-diol	C1=CC(=C(C=C1O)O)Cl	107.0	NaN
+	4	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1
+4-chloro-3-methylphenol	CC1=C(C=CC(=C1)O)Cl	66.52777777777777	235.0
+	4	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	1
+2-(4-hydroxy-3-methoxyphenyl)acetic acid	COC1=C(C=CC(=C1)CC(=O)O)O	140.5	NaN
+	5	1	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1
+4-hydroxybenzohydrazide	C1=CC(=CC=C1C(=O)NN)O	265.0	NaN
+	4	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	1
+4-nonylphenol	CCCCCCCCCC1=CC=C(C=C1)O	41.875	317.0
+	14	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	1
+5,5-diphenylimidazolidine-2,4-dione	C1=CC=C(C=C1)C2(C(=O)NC(=O)N2)C3=CC=CC=C3	293.468253968254	NaN
+	11	3	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	6	0	0	0	0	0	0	0
+4-amino-1-[3,4-dihydroxy-5-(hydroxymethyl)oxolan-2-yl]-1,3,5-triazin-2-one	C1=NC(=NC(=O)N1C2C(C(C(O2)CO)O)O)N	229.0 and decomposes	NaN
+	4	2	1	0	0	0	0	0	0	0	2	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	2
+2-(5-hydroxy-1H-indol-3-yl)acetic acid	C1=CC2=C(C=C1O)C(=CN2)CC(=O)O	162.0	NaN
+	8	2	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0	1	0	0	2	0	0	0	0	0	0	0
+2-(5-methoxy-1H-indol-3-yl)-N,N-dimethylethanamine	CN(C)CCC1=CNC2=C1C=C(C=C2)OC	69.5	NaN
+	13	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	0	0	2	0	0	0	0	0	0	1
+2-(5-methoxy-1H-indol-3-yl)ethanamine	COC1=CC2=C(C=C1)NC=C2CCN	121.5	NaN
+	12	2	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	3	0	0	0	0	0	0	0
+[(5-nitrofuran-2-yl)methylideneamino]urea	C1=C(OC(=C1)[N+](=O)[O-])C=NNC(=O)N	NaN	238.0
+	7	1	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	1	2
+7-hydroxy-2-(4-hydroxyphenyl)-2,3-dihydrochromen-4-one	C1C(OC2=C(C1=O)C=CC(=C2)O)C3=CC=C(C=C3)O	204.0	NaN
+	7	3	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	5	0	0	0	0	0	0	3
+7-(2-hydroxyethyl)-1,3-dimethylpurine-2,6-dione	CN1C2=C(C(=O)N(C1=O)C)N(C=N2)CCO	158.0	NaN
+	8	2	1	0	0	0	0	0	0	0	1	1	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	0	0
+1,2,3,4-tetrahydroacridin-9-amine	C1CCC2=NC3=CC=CC=C3C(=C2C1)N	183.5	NaN
+	13	3	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+33-(4-amino-3,5-dihydroxy-6-methyloxan-2-yl)oxy-1,3,5,6,9,11,17,37-octahydroxy-15,16,18-trimethyl-13-oxo-14,39-dioxabicyclo[33.3.1]nonatriaconta-19,21,23,25,27,29,31-heptaene-36-carboxylic acid	CC1C=CC=CC=CC=CC=CC=CC=CC(CC2C(C(CC(O2)(CC(CC(C(CCC(CC(CC(=O)OC(C(C1O)C)C)O)O)O)O)O)O)O)C(=O)O)OC3C(C(C(C(O3)C)O)N)O	170.0 and decomposes	NaN
+	21	3	0	0	0	0	0	1	1	0	3	0	0	0	0	0	0	0	0	0	0	7	0	0	0	0	0	0	10
+N-[3-acetyl-4-[2-hydroxy-3-(propan-2-ylamino)propoxy]phenyl]butanamide	CCCC(=O)NC1=CC(=C(C=C1)OCC(CNC(C)C)O)C(=O)C	127.4	NaN
+	10	1	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	2	0	0	0	0	0	0	2
+2-[2-[1-(4-chlorobenzoyl)-5-methoxy-2-methylindol-3-yl]acetyl]oxyacetic acid	CC1=C(C2=C(N1C(=O)C3=CC=C(C=C3)Cl)C=CC(=C2)OC)CC(=O)OCC(=O)O	151.5	637.0
+	9	3	0	0	0	0	0	1	1	1	0	0	0	0	0	0	0	0	0	0	0	6	0	0	0	0	0	0	1
+N-[methoxy(methylsulfanyl)phosphoryl]acetamide	CC(=O)NP(=O)(OC)SC	88.8	NaN
+	6	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1
+(4-acetamidophenyl) 2-hydroxybenzoate	CC(=O)NC1=CC=C(C=C1)OC(=O)C2=CC=CC=C2O	187.0	NaN
+	16	2	1	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	5	0	0	0	0	0	0	1
+N-(5-sulfamoyl-1,3,4-thiadiazol-2-yl)acetamide	CC(=O)NC1=NN=C(S1)S(=O)(=O)N	259.3095238095238	NaN
+	9	1	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+2-chloro-N-(ethoxymethyl)-N-(2-ethyl-6-methylphenyl)acetamide	CCC1=CC=CC(=C1N(COCC)C(=O)CCl)C	10.6	NaN
+	8	1	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	1	0	0	2	1	0	0	0	0	0	0
+1-(4-acetylphenyl)sulfonyl-3-cyclohexylurea	CC(=O)C1=CC=C(C=C1)S(=O)(=O)NC(=O)NC2CCCCC2	188.97222222222223	NaN
+	16	2	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	2	0
+N-hydroxyacetamide	CC(=O)NO	90.5	NaN
+	4	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+N-(acetylcarbamoyl)-2-phenylbutanamide	CCC(C1=CC=CC=C1)C(=O)NC(=O)NC(=O)C	100.5	NaN
+	9	1	2	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+6-acetamidohexanoic acid	CC(=O)NCCCCCC(=O)O	104.5	NaN
+	10	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+7-ethoxyacridine-3,9-diamine	CCOC1=CC2=C(C3=C(C=C(C=C3)N)N=C2C=C1)N	226.0	NaN
+	8	3	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	5	0	0	0	0	0	0	0
+2-(4-acetamidophenyl)acetic acid	CC(=O)NC1=CC=C(C=C1)CC(=O)O	173.0	NaN
+	10	1	1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+2-(diethylamino)ethyl 2,2-diphenylacetate	CCN(CC)CCOC(=O)C(C1=CC=CC=C1)C2=CC=CC=C2	113.5	NaN
+	14	2	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	1	0	0	6	0	0	0	0	0	0	0
+2-chloro-4-nitrobenzamide	C1=CC(=C(C=C1[N+](=O)[O-])Cl)C(=O)N	172.0	NaN
+	5	1	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0
+methyl N-(6-propylsulfanyl-1H-benzimidazol-2-yl)carbamate	CCCSC1=CC2=C(C=C1)N=C(N2)NC(=O)OC	209.0	NaN
+	14	2	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+[(2-methyl-2-methylsulfanylpropylidene)amino] N-methylcarbamate	CC(C)(C=NOC(=O)NC)SC	113.63888888888889	1992.0 and decomposes
+	4	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+1,8-dihydroxy-3-(hydroxymethyl)-10-[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy-10H-anthracen-9-one	C1=CC2=C(C(=C1)O)C(=O)C3=C(C2OC4C(C(C(C(O4)CO)O)O)O)C=C(C=C3O)CO	120.0 and decomposes	NaN
+	11	4	0	0	0	0	0	0	0	1	4	0	1	0	0	0	0	0	0	0	0	4	0	0	0	0	0	0	4
+2-(hydroxymethyl)-6-methoxyoxane-3,4,5-triol	COC1C(C(C(C(O1)CO)O)O)O	109.0	NaN
+	5	1	0	0	0	0	0	0	0	0	2	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3
+2,5,7,8-tetramethyl-2-(4,8,12-trimethyltridecyl)-3,4-dihydrochromen-6-ol	CC1=C(C2=C(CCC(O2)(C)CCCC(C)CCCC(C)CCCC(C)C)C(=C1O)C)C	3.0	NaN
+	4	2	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0
+[2,5,7,8-tetramethyl-2-(4,8,12-trimethyltridecyl)-3,4-dihydrochromen-6-yl] acetate	CC1=C(C(=C(C2=C1OC(CC2)(C)CCCC(C)CCCC(C)CCCC(C)C)C)OC(=O)C)C	27.0	NaN
+	4	2	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1
+8-chloro-1-methyl-6-phenyl-4H-[1,2,4]triazolo[4,3-a][1,4]benzodiazepine	CC1=NN=C2N1C3=C(C=C(C=C3)Cl)C(=NC2)C4=CC=CC=C4	228.41666666666666	NaN
+	15	4	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	1	0	0	0	5	0	0	0	0	0	0	0
+1-(propan-2-ylamino)-3-(2-prop-2-enylphenoxy)propan-2-ol	CC(C)NCC(COC1=CC=CC=C1CC=C)O	108.0	NaN
+	6	1	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	1
+trifluoroalumane	F[Al](F)F	1291.0	NaN
+	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+(2-chlorophenyl)methyl-[2-[[2-[2-[(2-chlorophenyl)methyl-diethylazaniumyl]ethylamino]-2-oxoacetyl]amino]ethyl]-diethylazanium	CC[N+](CC)(CCNC(=O)C(=O)NCC[N+](CC)(CC)CC1=CC=CC=C1Cl)CC2=CC=CC=C2Cl	197.5	NaN
+	11	2	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	6	0	0	0	0	0	0	0
+4-[(2-amino-3,5-dibromophenyl)methylamino]cyclohexan-1-ol	C1CC(CCC1NCC2=C(C(=CC(=C2)Br)Br)N)O	233.75	NaN
+	4	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	1
+3,5-diacetamido-2,4,6-triiodobenzoic acid	CC(=O)NC1=C(C(=C(C(=C1I)C(=O)O)I)NC(=O)C)I	275.0	NaN
+	6	1	1	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+3-(4-aminophenyl)-3-ethylpiperidine-2,6-dione	CCC1(CCC(=O)NC1=O)C2=CC=C(C=C2)N	172.21428571428572	NaN
+	8	2	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0
+2-[(4-aminobenzoyl)amino]acetic acid	C1=CC(=CC=C1C(=O)NCC(=O)O)N	198.83333333333334	NaN
+	4	1	1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0
+4-amino-1,5-dimethyl-2-phenylpyrazol-3-one	CC1=C(C(=O)N(N1C)C2=CC=CC=C2)N	109.0	NaN
+	4	2	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0
+1,3-dimethyl-7H-purine-2,6-dione	CN1C2=C(C(=O)N(C1=O)C)NC=N2	272.8888888888889	NaN
+	7	2	1	0	0	0	0	0	0	0	0	1	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	0	0
+1,3-thiazol-2-amine	C1=CSC(=N1)N	91.5	1992.0 and decomposes
+	5	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+4-amino-N-[(1-ethylpyrrolidin-2-yl)methyl]-5-ethylsulfonyl-2-methoxybenzamide	CCN1CCCC1CNC(=O)C2=CC(=C(C=C2OC)N)S(=O)(=O)CC	148.5	NaN
+	16	2	0	0	0	0	0	0	0	1	0	0	1	0	0	0	0	1	1	0	0	1	0	0	0	0	0	2	0
+N,N-dimethyl-3-(2-tricyclo[9.4.0.03,8]pentadeca-1(15),3,5,7,11,13-hexaenylidene)propan-1-amine	CN(C)CCC=C1C2=CC=CC=C2CCC3=CC=CC=C31	196.5	410.26
+	20	4	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	7	0	0	0	0	0	0	0

@@ -67,7 +67,6 @@ def parse_temp(arg):
     if templist == []:
         temp = 'NaN'
     else:
-        print(templist)
         temp = str(sum(templist)/len(templist))
         if decomp:
             temp+=' and decomposes'

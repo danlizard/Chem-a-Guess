@@ -1,14 +1,14 @@
 def prep_length(smiles):
-	length = 0
-	depth = 1
-	for sym in smiles:
-		if sym == '(':
-			depth +=1 
-		elif sym == ')':
-			depth -=1 
-		elif ij in 'QWERTYUIOPASDFGHJKLZXCVBNM' and bra:
-			length +=1
-	return length
+    length = 0
+    depth = 1
+    for sym in smiles:
+        if sym == '(':
+            depth +=1 
+        elif sym == ')':
+            depth -=1 
+        elif sym in 'QWERTYUIOPASDFGHJKLZXCVBNM' and depth == 1:
+            length +=1
+    return length
 
 def prep_group(smiles):
     num = '1234567890%'
@@ -21,7 +21,7 @@ def prep_group(smiles):
             atomc+=1
         elif smiles[i] in num:
             j =i
-            while smiles[j+1] in num:
+            while j+1<len(smiles) and (smiles[j+1] in num):
                 j+=1
             op = int(smiles[i:j+1])
             if op <= maxit:
@@ -35,7 +35,7 @@ def prep_group(smiles):
     return smiles, cyclist
 
 def ident_group(smiles, groupdict, absdict):
-    uppercase = 'QWERTYUIOPASDFGHJKLZXCVBNM'
+    uppercase = 'QWERTYUIOPASDFGHJKLZXCVBNM^'
     lowercase = 'qwertyuiopasdfghjklzxcvbnm'
     funclist = []
     opersmiles = smiles
@@ -57,18 +57,21 @@ def ident_group(smiles, groupdict, absdict):
         for gr in absdict.keys():
             while gr in opersmiles:
                 site, localsite = smiles.find(gr), opersmiles.find(gr)
-                atomid = localsite
+                atomid = localsite-1
                 while opersmiles[atomid] not in uppercase:
                     atomid-=1
-                if opersmiles[atomid+1] in lowercase:
-                    atom = opersmiles[atomid]+opersmiles[atomid+1]
+                if atomid<len(opersmiles)-1:
+                    if opersmiles[atomid+1] in lowercase:
+                        atom = opersmiles[atomid]+opersmiles[atomid+1]
+                    else:
+                        atom = opersmiles[atomid]                    
                 else:
                     atom = opersmiles[atomid]
                 i = 0
                 for el in smiles[:site+1]:
                     if el in uppercase:
                         i+=1
-                funclist.append([i, absdict[gr]+atom])
+                funclist.append([i, absdict[gr]+'-'+atom])
                 opersmiles = opersmiles.replace(gr,"^"*len(gr), 1)
                 smiles = smiles.replace(gr,"^"*len(gr), 1)
             opersmiles = ''.join(opersmiles.split('^'))
@@ -79,4 +82,4 @@ def ident_group(smiles, groupdict, absdict):
 if __name__ == '__main__':
     from dicts_forfunc import *
     smiles, cyclist = prep_group(input())
-    print(ident_group(smiles, func_dict, wildcard_dict))
+    print(ident_group(smiles, func_dict, wildcard_dict), cyclist)
