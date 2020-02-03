@@ -1,1 +1,5 @@
 localdata/
+
+.chempred/
+__pycache__/
+*.pyc

@@ -62,7 +62,7 @@ def manage_Core(specs):
         printer = True
     current = open(database+filename, 'r')
     result = open(database+resultpath, 'a')
-    source = current.readlines()
+    source = list(map(lambda el: el.rstrip('\n').rstrip('\r'), current.readlines()))
     lng = len(source)
     if printer:
         print('Working with', lng-1,'lines')
@@ -79,7 +79,7 @@ def manage_Core(specs):
         else:
             manage_pack(data, el, result, func_dictrev, wildcard_dictrev, 'data')
         if printer:
-            print('Parsed', i, 'out of', lng, 'entries')
+            print('Parsed', i, 'out of', lng, 'entries:', el.split('\t')[0])
     current.close()
     result.close()
     return None

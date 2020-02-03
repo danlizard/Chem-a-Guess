@@ -1,3 +1,4 @@
+# ToDo: use OrderedDict
 func_dict = {
     'C(=O)N':'Amide',
     'C(=O)F':'Acyl_Halide-F',

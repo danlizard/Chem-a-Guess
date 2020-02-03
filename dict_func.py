@@ -40,7 +40,7 @@ def ident_group(smiles, groupdict, absdict):
     funclist = []
     opersmiles = smiles
     stat = smiles
-    while any(gr in smiles for gr in groupdict.keys()):
+    while any(gr in opersmiles for gr in groupdict.keys()):
         for gr in groupdict.keys():
             while gr in opersmiles:
                 site = smiles.find(gr)
@@ -51,9 +51,9 @@ def ident_group(smiles, groupdict, absdict):
                 funclist.append([i, groupdict[gr]])
                 opersmiles = opersmiles.replace(gr,"^"*len(gr), 1)
                 smiles = smiles.replace(gr,"^"*len(gr), 1)
-        opersmiles = ''.join(opersmiles.split('^'))
-        opersmiles = ''.join(opersmiles.split('()'))
-    while any(gr in smiles for gr in absdict.keys()):
+                opersmiles = ''.join(opersmiles.split('^'))
+                opersmiles = ''.join(opersmiles.split('()'))
+    while any(gr in opersmiles for gr in absdict.keys()):
         for gr in absdict.keys():
             while gr in opersmiles:
                 site, localsite = smiles.find(gr), opersmiles.find(gr)
@@ -74,8 +74,8 @@ def ident_group(smiles, groupdict, absdict):
                 funclist.append([i, absdict[gr]+'-'+atom])
                 opersmiles = opersmiles.replace(gr,"^"*len(gr), 1)
                 smiles = smiles.replace(gr,"^"*len(gr), 1)
-            opersmiles = ''.join(opersmiles.split('^'))
-            opersmiles = ''.join(opersmiles.split('()'))
+                opersmiles = ''.join(opersmiles.split('^'))
+                opersmiles = ''.join(opersmiles.split('()'))
     return funclist
 
  
@@ -83,3 +83,7 @@ if __name__ == '__main__':
     from dicts_forfunc import *
     smiles, cyclist = prep_group(input())
     print(ident_group(smiles, func_dict, wildcard_dict), cyclist)
+    
+'''
+fix CCCCNCC(C1=CC=C(C=C1)O)O
+'''
