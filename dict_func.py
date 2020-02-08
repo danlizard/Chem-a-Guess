@@ -34,6 +34,50 @@ def prep_group(smiles):
         smiles = ''.join(smiles.split(str(i)))
     return smiles, cyclist
 
+def placeholder_branch(line, mode):
+    uppercase = 'QWERTYUIOPASDFGHJKLZXVBNM'
+    stat = line
+    line = line.replace('^', 'C')
+    for i in range(len(line)-2):
+        op = '('+'C'*i+')'
+        while op in line:
+            x = line.find(op)
+            if mode == 'rep':
+                line = line[:x] + '^'*(i+2) + line[x+i+2:]
+            elif mode == 'del':
+                line = line[:x] + line[x+i+2:]
+    return(line)
+
+def group_extract(stat, line, operline, gr, grdict):
+    loclist = []
+    locop = ''.join(line.split('^'))
+    uppercase = 'QWERTYUIOPASDFGHJKLZXCVBNM^~'
+    lowercase = 'qwertyuiopasdfghjklzxcvbnm'
+    if gr in line:
+        while gr in line:
+            site = line.find(gr)
+            i = 0
+            for el in stat[:site+1]:
+                if el in uppercase:
+                    i+=1    
+            loclist.append([i, grdict[gr]])
+            operline = operline.replace(gr[1:],"^"*len(gr[1:]), 1)
+            line = line.replace(gr[1:],"^"*len(gr[1:]), 1)
+            operline = ''.join(operline.split('^'))
+            operline = ''.join(operline.split('()'))
+    else:
+        site = locop.find(gr)
+        i = 0
+        for el in stat[:site+1]:
+            if el in uppercase:
+                i+=1    
+        loclist.append([i, grdict[gr]])
+        operline = operline.replace(gr[1:],"^"*len(gr[1:]), 1)
+        line = line.replace(gr[1:],"^"*len(gr[1:]), 1)
+        operline = ''.join(operline.split('^'))
+        operline = ''.join(operline.split('()'))
+    return operline, line, loclist
+
 def ident_group(smiles, groupdict, absdict):
     uppercase = 'QWERTYUIOPASDFGHJKLZXCVBNM^'
     lowercase = 'qwertyuiopasdfghjklzxcvbnm'
@@ -43,18 +87,17 @@ def ident_group(smiles, groupdict, absdict):
     while any(gr in opersmiles for gr in groupdict.keys()):
         for gr in groupdict.keys():
             while gr in opersmiles:
-                site = smiles.find(gr)
-                i = 0
-                for el in stat[:site+1]:
-                    if el in uppercase:
-                        i+=1
-                funclist.append([i, groupdict[gr]])
-                opersmiles = opersmiles.replace(gr,"^"*len(gr), 1)
-                smiles = smiles.replace(gr,"^"*len(gr), 1)
+                opersmiles, smiles, loclist = list(group_extract(stat, smiles, opersmiles, gr, groupdict))
+                for el in loclist:
+                    funclist.append(el)
                 opersmiles = ''.join(opersmiles.split('^'))
                 opersmiles = ''.join(opersmiles.split('()'))
+                opersmiles = placeholder_branch(opersmiles, 'del')
+                smiles = placeholder_branch(smiles, 'rep')
     while any(gr in opersmiles for gr in absdict.keys()):
         for gr in absdict.keys():
+            if gr == opersmiles:
+                return funclist
             while gr in opersmiles:
                 site, localsite = smiles.find(gr), opersmiles.find(gr)
                 atomid = localsite-1

@@ -60,10 +60,12 @@ def manage_Core(specs):
         database = (specs.split('>changebaseto-')[1].split('<')[0])+'\\'
     if '>console' in specs:
         printer = True
+    if '>keeplogat-' in specs:
+        pass
     current = open(database+filename, 'r')
     result = open(database+resultpath, 'a')
     source = list(map(lambda el: el.rstrip('\n').rstrip('\r'), current.readlines()))
-    lng = len(source)
+    lng = len(source)-1
     if printer:
         print('Working with', lng-1,'lines')
     manage_pack('None', source[0], result, func_dictrev, wildcard_dictrev, 'header')
@@ -79,7 +81,7 @@ def manage_Core(specs):
         else:
             manage_pack(data, el, result, func_dictrev, wildcard_dictrev, 'data')
         if printer:
-            print('Parsed', i, 'out of', lng, 'entries:', el.split('\t')[0])
+            print('Parsed', i, 'out of', lng-1, 'entries:', el.split('\t')[0])
     current.close()
     result.close()
     return None

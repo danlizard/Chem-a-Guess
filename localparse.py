@@ -17,6 +17,8 @@ def parse_temp(arg):
                 templist.append(float(op['Number'][0]))
             elif 'F' in op['Unit']:
                 templist.append((float(op['Number'][0])-32)*5/9)
+            elif 'K' in op['Unit']:
+                templist.append(float(op['Number'][0])-273.15)
             else:
                 try:
                     templist.append(float(op['Number'][0]))
@@ -67,7 +69,7 @@ def parse_temp(arg):
     if templist == []:
         temp = 'NaN'
     else:
-        temp = str(sum(templist)/len(templist))
+        temp = str(sum(templist)/len(templist) + 273.15)
         if decomp:
             temp+=' and decomposes'
     return temp

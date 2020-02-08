@@ -1,7 +1,9 @@
 dictfunc.py (Dictionary Functionaliser):
 1. function prep_length: Accepts any SMILES, returns main branch length.
 2. function prep_group: Accepts SMILES, returns prepared and stripped SMILES (prSMILES) as well as the number of cycles.
-3. function ident_group: Accepts prSMILES and group dictionaries, returns a list of the functional groups of the molecule.
+3. subfunction placeholder_branch for ident_group: Accepts intermediate SMILES and mode, returns SMILES with informationless branches replaced with 'C...' or cut off.
+4. subfunction group_extract for ident_group: Accepts 3 states of SMILES, a functional group and the dictionary that contains it, returns a list of the group's occurrences within SMILES.
+5. function ident_group: Accepts prSMILES and group dictionaries, returns a list of the functional groups of the molecule.
 IS DEPENDENT ON: dicts_forfunc.py, which must be imported alongside dictfunc.py and passed on to the ident_group function.
 
 localfunc.py (Local Functions):
